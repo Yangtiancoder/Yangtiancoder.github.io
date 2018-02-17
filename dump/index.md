@@ -7,7 +7,7 @@ layout: home
         <ul class="artical-cate">
             <li class="on"><a href="/"><span>Blog</span></a></li>
             <li style="text-align:center"><a href="/dump"><span>Book</span></a></li>
-            <li style="text-align:right"><a href="/project"><span>Life</span></a></li>
+            <li style="text-align:right"><a href="/project"><span>Bagatelle</span></a></li>
         </ul>
 
         <div class="cate-bar"><span id="cateBar"></span></div>
