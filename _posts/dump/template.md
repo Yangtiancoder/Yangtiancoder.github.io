@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 不语
-category: dump
+category: Study
 description: Die Erkenntnis.
 ---
 
