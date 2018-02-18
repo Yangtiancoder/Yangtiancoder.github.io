@@ -2,7 +2,7 @@
 layout:     post
 title: MySQL 重点整理
 category: blog
-description: 整理自《高性能 MySQL》-牛客CyC001
+description: 整理自《高性能 MySQL》
 ---
 
 
