@@ -19,7 +19,7 @@ description: 在“科学现身说”中担任最后一场的主讲人。
 
 这是W哥讲给我的故事。
 
-![纸面国的故事](http://imglf2.nosdn.127.net/img/UlJvNXBPT29FZFk2WWVUY1hxcHh5SVpOcUJUN2lWQ2tIUEpldTIzMkZiSk13NkhxOWFnVTdRPT0.jpg?imageView&thumbnail=1680x0&quality=96&stripmeta=0&type=jpg)
+![纸面国的故事](http://img.blog.csdn.net/20180122151455509?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveXVpaDM0NA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 
 ![水滴](http://imglf0.nosdn.127.net/img/UlJvNXBPT29FZFk2WWVUY1hxcHh5UGdVODErZ2ltQ1ZvUEFYc245cGw0NHpscGxEZU5HbGtBPT0.jpg?imageView&thumbnail=1680x0&quality=96&stripmeta=0&type=jpg)
 
