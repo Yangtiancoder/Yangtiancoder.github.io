@@ -2,7 +2,7 @@
 layout:     post
 title: 异或问题
 category: blog
-description: 机器学习基础
+description: 感知机无法解决的基本类型
 ---
 
 ![简陋的草图](http://img.blog.csdn.net/20150504212916039?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveWFuZ2ZlaXNj/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)
