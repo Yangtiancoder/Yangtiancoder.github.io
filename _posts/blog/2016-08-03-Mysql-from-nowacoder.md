@@ -1,6 +1,6 @@
 ---
 layout:     post
-title: (转)MySQL 重点整理
+title: MySQL 重点整理
 category: blog
 description: 整理自《高性能 MySQL》-牛客CyC001
 ---
