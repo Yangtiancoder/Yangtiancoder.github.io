@@ -1,8 +1,8 @@
 ---
 layout:     post
-title: 《机器学习之策略与模型评估与选择》
+title: 机器学习之策略与模型评估与选择
 category: blog
-description: 机器学习基础
+description: 机器学习应掌握的基础知识
 ---
 
 
