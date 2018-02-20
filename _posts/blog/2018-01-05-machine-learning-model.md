@@ -2,7 +2,7 @@
 layout:     post
 title: 机器学习之策略与模型评估与选择
 category: blog
-description: 机器学习应掌握的基础知识。
+description: 记不住的机器学习应掌握的基础知识。
 ---
 
 
