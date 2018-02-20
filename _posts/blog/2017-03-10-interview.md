@@ -1,8 +1,8 @@
 ---
 layout:     post
-title: 自己总结的面试干货
+title: 自己总结的JAVA面试干货
 category: blog
-description: java面试经验
+description: 实践出真知，java面试经验。
 ---
                                                                                                       
 
