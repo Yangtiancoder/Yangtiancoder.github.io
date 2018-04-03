@@ -2,7 +2,7 @@
 layout:     post
 title: 机器学习笔记（二）之感知机
 category: blog
-description: 记不住的机器学习应掌握的基础知识。
+description: 机器学习笔记系列。
 ---
 
 
