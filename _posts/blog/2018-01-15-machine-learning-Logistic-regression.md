@@ -14,7 +14,7 @@ description: 机器学习笔记系列。
 
 
 
-我们在线性回归分析时，有时会遇到因变量y不是连续值，而是离散的，很多情况是0-1变量。如分析顾客对于商品行为的导致的结果是买（1）还是不买（0），分析股票的各种数据，因变量也是买（1）、不买（0）…。这种因变量如果我们还是使用线性回归，得到的直线一定与样本拟合得不好。举个例子，我们考察选民年收入和给某个候选人投票的相关性，如果我用线性回归来做。设回归方程为y=mx+b+e（为了严谨e为方程的干扰值，与x无关，服从正态分布，平均值为0）。显然，y=0，表示未投票；y=1表示投票。一定要记住由于e的存在，yi的值只能是一个统计值，也许每次的yi都不一样（夸张了点）。而yi 的值取（0，1），yi期望E(yi|xi)= P(yi=1|xi)，其实就是yi=1的条件概率（比如有5个取值0,1,1,0,1，平均值为0.6，也就是y取1的概率为0.6）。因此因变量为二分类的线性规划模型又叫线性概率模型（linear probability model）。如果模型是线性的，很显然，如果xi是一个很大的值（如年收入1亿），那么我们得到的yi很可能大于1，相反如果年收入是一个很小的值（如-100000）,那yi的值很可能得到一个小于0的值。实际上，这很可能是个分段函数模型，这对于线性回归就不方便计算了。
+我们在线性回归分析时，有时会遇到因变量y不是连续值，而是离散的，很多情况是0-1变量。如分析顾客对于商品行为的导致的结果是买（1）还是不买（0），分析股票的各种数据，因变量也是买（1）、不买（0）…。这种因变量如果我们还是使用线性回归，得到的直线一定与样本拟合得不好。举个例子，我们考察选民年收入和给某个候选人投票的相关性，如果我用线性回归来做。设回归方程为y=mx+b+e（为了严谨e为方程的干扰值，与x无关，服从正态分布，平均值为0）。显然，y=0，表示未投票；y=1表示投票。一定要记住由于e的存在，yi的值只能是一个统计值，也许每次的yi都不一样（夸张了点）。。因此因变量为二分类的线性规划模型又叫线性概率模型（linear probability model）。如果模型是线性的，很显然，如果xi是一个很大的值（如年收入1亿），那么我们得到的yi很可能大于1，相反如果年收入是一个很小的值（如-100000）,那yi的值很可能得到一个小于0的值。实际上，这很可能是个分段函数模型，这对于线性回归就不方便计算了。
 
 
 
@@ -35,7 +35,7 @@ LR回归属于概率性判别式模型，之所谓是概率性模型，是因为
 定义：
 
 
-![简陋的草图](https://img-blog.csdn.net/20180116095311625?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveXVpaDM0NA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+![简陋的草图](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/images/7.png?raw=true)
 
 
 
@@ -43,7 +43,7 @@ logistic回归模型：
 
 
 
-![简陋的草图](https://img-blog.csdn.net/20180116104149875?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveXVpaDM0NA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+![简陋的草图](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/images/8.png?raw=true)
 
 
 
@@ -51,7 +51,7 @@ logistic回归模型：
 
 
 
-![简陋的草图](https://img-blog.csdn.net/20180116104516483?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveXVpaDM0NA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+![简陋的草图](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/images/9.png?raw=true)
 
 
 
