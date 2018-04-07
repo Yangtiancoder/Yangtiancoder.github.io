@@ -24,7 +24,7 @@ description: 机器学习笔记系列。
 
 核技巧将线性不可分的模型映射到高维空间，变得线性可分，通过核函数的映射三维空间可以通过二维平面进行划分，一般来说映射到高维空间后计算复杂度会增加，其消耗的时间也会增加。
 
-对于线性可分的问题，SVM是等价与感知器的，详见http://yangtian.xyz/machine-learning-Sensor，只不过
+对于线性可分的问题，SVM是等价与感知器的，详见http://yangtian.xyz/machine-learning-Sensor 只不过
 
 在此基础上保持几何间隔最大化，几何间隔最大的超平面是唯一的，几何间隔最大可以理解为在一定程度上保持距离超平面最近的点也有一定的确信度将其分开，也可以理解为一定程度上避免过拟合，拥有很好的预测能力。
 
@@ -34,7 +34,7 @@ description: 机器学习笔记系列。
 
 ![简陋的草图](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/images/13.png?raw=true)
 
-以上等式可以通过对偶算法来求解，至于对偶算法，详见https://www.zhihu.com/question/26658861/answer/53394624，知乎上作者的回答比较详尽，求解对偶算法时应用到了拉格朗日算子
+以上等式可以通过对偶算法来求解，至于对偶算法，详见https://www.zhihu.com/question/26658861/answer/53394624 知乎上作者的回答比较详尽，求解对偶算法时应用到了拉格朗日算子
 
 
 ![简陋的草图](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/images/14.png?raw=true)
