@@ -19,9 +19,9 @@ description: 勤能补拙是良训,一分辛苦一分才。
 
   至于为什么要考研，可见下图（截图自知乎）：
   
- ![简陋的草图](Yangtiancoder.github.io/images/20180402161915815.JPG)
+ ![简陋的草图](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/images/20180402161934325.JPG)
 
- ![简陋的草图](Yangtiancoder.github.io/images/20180402161934325.JPG)
+ ![简陋的草图](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/images/20180402161934325.JPG)
   
   之后就开始了每天的学习生活，翘了很多很多的课，不过我觉得绝大部分老师都是很仁慈的，知道大四的同学找工作的找工作考研的考研，不会因为你没来点名就挂了你，还记得同学说我们专业老师，老师问同学你找到工作了么，同学说还没，老师说没找到工作还来上什么课，哈哈，可能有开玩笑的成分，但我觉得老师还是很nice的，老师们还是很体谅学生的，由此可见一斑。
   
