@@ -161,7 +161,8 @@ f′(x0)=limΔx→0f(x0+Δx)−f(x0)Δx
 支持向量机追求大致正确分类的同时，一定程度上避免过拟合，效果类似下图中的黑线。
 感知机使用的学习策略是梯度下降法，而SVM采用的是由约束条件构造拉格朗日函数，然后求偏导令其为0求得极值点。这里特别说明下一般我们的拉格朗日函数是符合凸函数的，因此对于凸函数一定存在极值点，也是唯一的最优解。而一般的非凸函数，只好采用梯度下降法一步一步的求得极值点，如果非凸函数还是采用求导令为0，可能找不到极值点！因为鞍点也是导数为，但却不是极值点的特例，如y = x^3函数。导数为0是函数极值点的必要条件。
 
-![简陋的草图](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/images/28.JPG?raw=true)
+
+![](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/images/28.JPG?raw=true)
 
 
 感知机的缺点
