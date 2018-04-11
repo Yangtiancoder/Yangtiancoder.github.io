@@ -2,7 +2,7 @@
 layout: post
 title: MySQL 重点整理
 category: blog
-tags: MySQL[MySQL, 面试]
+tags: [MySQL, 面试]
 description: （转）整理自《高性能 MySQL》。
 ---
 
