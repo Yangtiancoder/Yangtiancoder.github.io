@@ -25,7 +25,7 @@ layout: page
 
 * <i class="fa fa-weibo"></i><a href="https://weibo.com/u/5393123005?refer_flag=1001030201_&is_hot=1" target="_blank" title="我的weibo">我的微博</a>
 * <i class="fa fa-github"></i><a href="https://github.com/Yangtiancoder" target="_blank" title="Yangtian的github">我的GitHub</a>
-* <i class="fa fa-searchh"></i><a href="https://www.zhihu.com/people/tian-yang-48-83/activities" target="_blank" title="我的知乎"> 我的知乎</a>
+* <i class="fa fa-search"></i><a href="https://www.zhihu.com/people/tian-yang-48-83/activities" target="_blank" title="我的知乎"> 我的知乎</a>
 * <i class="fa fa-cuttlefish"></i><a href="https://blog.csdn.net/yuih344" target="_blank" title="我的CSDN"> 我的CSDN</a>
 
 
