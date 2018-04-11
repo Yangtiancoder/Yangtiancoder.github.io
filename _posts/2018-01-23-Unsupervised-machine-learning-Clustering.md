@@ -1,7 +1,8 @@
 ---
-layout:     post
+layout: post
 title: 无监督学习中的聚类算法
 category: blog
+tags: [机器学习, 聚类, 毕设]
 description: 毕设初涉。
 ---
 
