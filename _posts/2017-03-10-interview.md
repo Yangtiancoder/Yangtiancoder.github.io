@@ -1,18 +1,19 @@
 ---
-layout:     post
-title: 自己总结的JAVA面试干货
+layout: post
+title: 总结的JAVA面试干货
 category: blog
+tags: [Java, 面试]
 description: 实践出真知，java面试经验。
 ---
-                                                                                                      
+                                                                                               
 
 春招的话金三银四，要好好把握，这是我之面试中总结的知识点，一部分是网上down来的，一部分是搜集的面试问题，应该是很全面了，问来问去基础也就那些，无论是BAT等一线大厂或者其他不同的企业这些面试题目足够了，再也有一些推荐的书单这个大家可以在网上找然后自行下载和也附上我的一些资料，具体的学习路线不用多说，自行Baidu即可，弄懂了这些面试常见问题，基础的方面算是解决了，剩下的项目经验还要注重平时积累，切忌临时抱佛脚，很快就会露馅的。
 
 网站推荐
 
-http://gityuan.com/2016/01/09/java-memory/内存模型
-http://www.guokr.com/post/114121/ Https握手
-http://blog.csdn.net/laner0515/article/details/27692673/核心工作原理
+http://gityuan.com/2016/01/09/java-memory/  内存模型
+http://www.guokr.com/post/114121/ Https握手 
+http://blog.csdn.net/laner0515/article/details/27692673/ 核心工作原理
 http://www.cnblogs.com/fanzhidongyzby/p/4098546.html IO
 http://blog.csdn.net/sszgg2006/article/details/38664789 IO
 http://blog.csdn.net/forfuture3513/article/details/52445213 IO
