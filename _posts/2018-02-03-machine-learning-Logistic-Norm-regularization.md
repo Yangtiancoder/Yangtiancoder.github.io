@@ -7,7 +7,9 @@ description: 机器学习笔记系列。
 ---
 
 
-这篇文章参考自作者zouxy09，做了一些删减适于新手的阅读，也加上一些自己的理解，原作者写的十分专业，比较经典，有不懂得可以参看原文http://blog.csdn.net/zouxy09/article/details/24971995
+这篇文章参考自作者zouxy09，做了一些删减适于新手的阅读，也加上一些自己的理解，原作者写的十分专业，比较经典，有不懂得可以参看原文
+
+http://blog.csdn.net/zouxy09/article/details/24971995
 
   
 监督学习的过程可以概括为：最小化误差的同时规则化参数。最小化误差是为了让模型拟合训练数据，规则化参数是为了防止过拟合。参数过多会导致模型复杂度上升，产生过拟合，即训练误差很小，但测试误差很大，这和监督学习的目标是相违背的。所以需要采取措施，保证模型尽量简单的基础上，最小化训练误差，使模型具有更好的泛化能力（即测试误差也很小）。
@@ -23,7 +25,7 @@ description: 机器学习笔记系列。
 
    一般来说，监督学习可以看做最小化下面的目标函数：
 
-![简陋的草图](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/images/1.png?raw=true)
+![简陋的草图](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/assets/images/1.png?raw=true)
 
    其中，第一项L(yi,f(xi;w)) 衡量我们的模型（分类或者回归）对第i个样本的预测值f(xi;w)和真实的标签yi之前的误差。因为我们的模型是要拟合我们的训练样本的嘛，所以我们要求这一项最小，也就是要求我们的模型尽量的拟合我们的训练数据。但正如上面说言，我们不仅要保证训练误差最小，我们更希望我们的模型测试误差小，所以我们需要加上第二项，也就是对参数w的规则化函数Ω(w)去约束我们的模型尽量的简单。
 
@@ -40,7 +42,7 @@ description: 机器学习笔记系列。
 
    对了，上面还有一个问题：既然L0可以实现稀疏，为什么不用L0，而要用L1呢？个人理解一是因为L0范数很难优化求解（NP难问题），二是L1范数是L0范数的最优凸近似，而且它比L0范数要容易优化求解。所以大家才把目光和万千宠爱转于L1范数。
 
-![简陋的草图](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/images/2.png?raw=true)
+![简陋的草图](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/assets/images/2.png?raw=true)
 
   OK，来个一句话总结：L1范数和L0范数可以实现稀疏，L1因具有比L0更好的优化求解特性而被广泛应用。
 
@@ -51,9 +53,9 @@ L0和L1都可以实现稀疏化，不过一般选用L1而不用L0，原因包括
 
 1）特征选择
 
-​实现特征的自动选择，去除无用特征。稀疏化可以去掉这些无用特征，将特征对应的权重置为零。
+实现特征的自动选择，去除无用特征。稀疏化可以去掉这些无用特征，将特征对应的权重置为零。
 
-2）可解释性（interpretability）​
+2）可解释性（interpretability）
 
 例如判断某种病的患病率时，最初有1000个特征，建模后参数经过稀疏化，最终只有5个特征的参数是非零的，那么就可以说影响患病率的主要就是这5个特征。
 
@@ -62,12 +64,12 @@ L0和L1都可以实现稀疏化，不过一般选用L1而不用L0，原因包括
 二、L2范数
 
    除了L1范数，还有一种更受宠幸的规则化范数是L2范数: |它也不逊于L1范数，它有两个美称，在回归里面，有人把有它的回归叫“岭回归”（Ridge Regression），有人也叫它“权值衰减weight decay”。这用的很多吧，因为它的强大功效是改善机器学习里面一个非常重要的问题：过拟合。至于过拟合是什么，上面也解释了，就是模型训练时候的误差很小，但在测试的时候误差很大，也就是我们的模型复杂到可以拟合到我们的所有训练样本了，但在实际预测新的样本的时候，糟糕的一塌糊涂。通俗的讲就是应试能力很强，实际应用能力很差。擅长背诵知识，却不懂得灵活利用知识。例如下图所示（来自Ng的course）：
-![简陋的草图](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/images/3.png?raw=true)
+![简陋的草图](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/assets/images/3.png?raw=true)
 
 
    上面的图是线性回归，下面的图是Logistic回归，也可以说是分类的情况。从左到右分别是欠拟合（underfitting，也称High-bias）、合适的拟合和过拟合（overfitting，也称High variance）三种情况。可以看到，如果模型复杂（可以拟合任意的复杂函数），它可以让我们的模型拟合所有的数据点，也就是基本上没有误差。对于回归来说，就是我们的函数曲线通过了所有的数据点，如上图右。对分类来说，就是我们的函数曲线要把所有的数据点都分类正确，如下图右。这两种情况很明显过拟合了。
 
-![简陋的草图](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/images/4.png?raw=true)
+![简陋的草图](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/assets/images/4.png?raw=true)
 
    OK，那现在到我们非常关键的问题了，为什么L2范数可以防止过拟合？回答这个问题之前，我们得先看看L2范数是个什么东西。
 
@@ -95,14 +97,14 @@ L2范数的好处是什么呢？这里也扯上两点：
 
    我们知道，L1和L2都是规则化的方式，我们将权值参数以L1或者L2的方式放到代价函数里面去。然后模型就会尝试去最小化这些权值参数。而这个最小化就像一个下坡的过程，L1和L2的差别就在于这个“坡”不同，如下图：L1就是按绝对值函数的“坡”下降的，而L2是按二次函数的“坡”下降。所以实际上在0附近，L1的下降速度比L2的下降速度要快。所以会非常快得降到0。不过我觉得这里解释的不太中肯，当然了也不知道是不是自己理解的问题。
 
-![简陋的草图](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/images/5.png?raw=true)
+![简陋的草图](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/assets/images/5.png?raw=true)
 
    L1在江湖上人称Lasso，L2人称Ridge。不过这两个名字还挺让人迷糊的，看上面的图片，Lasso的图看起来就像ridge，而ridge的图看起来就像lasso。
 
 2）模型空间的限制：
 
    为了便于可视化，我们考虑两维的情况，在(w1, w2)平面上可以画出目标函数的等高线，而约束条件则成为平面上半径为C的一个 norm ball 。等高线与 norm ball 首次相交的地方就是最优解：
-![简陋的草图](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/images/6.png?raw=true)
+![简陋的草图](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/assets/images/6.png?raw=true)
 
 
    可以看到，L1-ball 与L2-ball 的不同就在于L1在和每个坐标轴相交的地方都有“角”出现，而目标函数的测地线除非位置摆得非常好，大部分时候都会在角的地方相交。注意到在角的位置就会产生稀疏性，例如图中的相交点就有w1=0，而更高维的时候（想象一下三维的L1-ball 是什么样的？）除了角点以外，还有很多边的轮廓也是既有很大的概率成为第一次相交的地方，又会产生稀疏性。
@@ -114,11 +116,6 @@ L2范数的好处是什么呢？这里也扯上两点：
 
 
 原文链接：http://blog.csdn.net/zouxy09
-
-
-
-
-
 
 
 
