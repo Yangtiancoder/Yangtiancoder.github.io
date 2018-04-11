@@ -3,40 +3,28 @@ title: about me
 layout: page
 ---
 
-Hi
+你好
 
-I'm glad that you finally discovered my site!
+我很高兴你终于发现我的网站！
 
 
  <h3>为什么写个人博客</h3>
   
-  A place share my thoughts <a href="https://sivers.org/sharing">分享即是意义</a>
+  A place share my thoughts 
   
-  If your time to you is worth savin’ Then you better start swimming Or you’ll sink like a stone For the times they are a changin.
+  Every single day without dancing is one day we betrayed of life.
+  
+  每一个不曾起舞的日子，都是对生命的辜负。                   ——尼采
 
-如果年华值得珍重，最好此刻开始游动，不然你将如石头沉至水底，因为这是变革的时代。  -   Bob Dylan
 
 
 
-<h3>我是谁</h3>
-
-A  girl born in 1993
- 
--  blue sky
--  music
-   - Deserts Zhang  
--  book
-   - literature
-   - psychology
--  sports
-   - lift
-   - runnning
-   - bicycling
 
 <h3>勾搭我</h3>
 
-* <i class="fa fa-envelope"></i>huyuning931218@126.com
-* <i class="fa fa-github"></i><a href="http://www.github.com/BleuHu/" target="_blank" title="BleuHu的github">我的GitHub</a>
-* <i class="fa fa-pencil"></i><a href="http://www.huyuning.com" target="_blank" title="我的个人博客"> River Flow（www.huyuning.com）</a>
+* <i class="fa fa-weibo"></i><a href="https://weibo.com/u/5393123005?refer_flag=1001030201_&is_hot=1" target="_blank" title="我的weibo">我的微博</a>
+* <i class="fa fa-github"></i><a href="https://github.com/Yangtiancoder" target="_blank" title="Yangtian的github">我的GitHub</a>
+* <i class="fa fa-searchh"></i><a href="https://www.zhihu.com/people/tian-yang-48-83/activities" target="_blank" title="我的知乎"> 我的知乎</a>
+* <i class="fa fa-cuttlefish"></i><a href="https://www.zhihu.com/people/tian-yang-48-83/activities" target="_blank" title="我的CSDN"> 我的CSDN</a>
 
 
