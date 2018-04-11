@@ -1,13 +1,13 @@
 ---
 layout: post
 title: 归来衫袖有天香
-category: project
+category: life
 tags: [总结, 转折]
 description: 勤能补拙是良训,一分辛苦一分才。
 ---
 
 
-   - [考研姊妹篇](http://yangtian.xyz/important-expperiences)
+   - [考研姊妹篇](http://yangtian.xyz/life/2017/12/25/important-expperiences/)
    
    
 
