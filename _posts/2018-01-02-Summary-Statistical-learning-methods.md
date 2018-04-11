@@ -1,6 +1,6 @@
 ---
 layout: post
-title:《统计学习方法》总结  
+title: 《统计学习方法》总结  
 category: blog
 tags: [机器学习, 总结]
 description: 统计学习方法一刷有感。
