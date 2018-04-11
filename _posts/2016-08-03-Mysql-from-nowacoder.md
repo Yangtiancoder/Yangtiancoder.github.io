@@ -1,11 +1,10 @@
 ---
-layout:     post
+layout: post
 title: MySQL 重点整理
-category: dump
-description: 整理自《高性能 MySQL》
+category: blog
+tags: MySQL[MySQL, 面试]
+description: （转）整理自《高性能 MySQL》。
 ---
-
-
 
 <!-- GFM-TOC -->
 * [存储引擎](#存储引擎)
