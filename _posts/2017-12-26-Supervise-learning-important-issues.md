@@ -1,11 +1,10 @@
 ---
-layout:     post
+layout: post
 title: 机器学习笔记（一）之监督学习重要问题
 category: blog
+tags: [机器学习]
 description: 机器学习笔记系列。
 ---
-
-
 
 
 分类问题，标注问题，回归问题为监督学习重要问题
