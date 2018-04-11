@@ -23,7 +23,7 @@ description: 勤能补拙是良训,一分辛苦一分才。
 再说说考研的初衷吧，我呢，其实最开始是打算找工作的，可能准备时间要早很多，那一段时间我记得很清楚，最后也是惨淡收场，想来也是很蓝瘦。。。那可能是第一次感觉自己全力以赴却没有成功的一次吧，挫败感尤甚，但是最后其实并不后悔有那样一段经历，因为发现了自己还是差劲得多，怎么办呢，考研呗，曲线救国的办法，这就成为我考研战争的导火索。我想很多人考研的人儿应该要知道自己想要什么吧，不应该为了考研而考研，这样会有些目标感，比如我想换个区域，或者本专业并不来电，或者我想在学术上深造一番，亦或者是仅仅不想顶着所谓的本科学历，可能每个人都有各种各样的原因吧，最终目的只有一个，教练，我想读研。
    
   
- ![简陋的草图](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/images/timg.jpg?raw=true)
+ ![简陋的草图](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/assets/images/timg.jpg?raw=true)
   
    
 之后就开始考研的准备了。至于具体考研过程呢，我就不赘述了，现在只是觉得是一个很漫长煎熬的过程，但庆幸的是最终还能坚持下来吧，好像说考研过程不辛苦，显的不太现实了，但我由衷觉得那段时间还是挺充实的，然而压力并不是来自考研本身，其实更多的是来自周围的人，有的同学保研成功，有的同学签了工作，剩下考研的还是为充满不确定性的考试而准备，等待考试，考试结束等待成绩，成绩出了，等待复试，期间二战的同学或者春招的同学又开始另一轮的准备，复试完了，再等待录取，真的是一个很煎熬很考验人的过程，每一步也都有失败的可能，一旦失败就意味着前功尽弃，我想这才是考研真正的难度所在吧。
@@ -31,7 +31,7 @@ description: 勤能补拙是良训,一分辛苦一分才。
    
 附图，暑假快热化了的（真）考研狗，现在想起来西安是真滴热，火炉名不虚传~
 
-![简陋的草图](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/images/IMG_20170720_112410.jpg?raw=true)
+![简陋的草图](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/assets/images/IMG_20170720_112410.jpg?raw=true)
    
    
 说完煎熬的事再说说有意思的事，考研期间有意思的事也挺多的，现在记不太清了。总是有一些之前不曾遇到过的事发生，每天一样的生活会让你感觉时间格外的长，但现在想来好像也没那么难捱。我记得当时是在六楼一个小自习室，每天教室都是一样的人，大家都早出晚归，本来都不认识看着看着也就都认识了，还记得考试当天在长大附中初试的时候，也看见了一个自习室的小伙伴，虽然都不认识也不知道叫啥，但还是互相打了招呼，感觉就像在说互相加油，现在想想其实也挺有意思的。
@@ -68,7 +68,7 @@ description: 勤能补拙是良训,一分辛苦一分才。
 现在就能想到这么多，想起来什么再补上吧。总而言之，言而总之，考研之路，如人饮水，冷暖自知，不要因别人的经历，而对生活失去信心。甚至不要因自己从前的厄运，而不再相信生活。因为对每个人而言，别人过的怎样，其实毫无借鉴意义。生活最终还是靠自己一点点过出来的。最后一老套且真实的话送给大家，欲戴王冠，必承其重，勿忘初心，方得始终。
 
 
-![简陋的草图](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/images/1523350653664.jpeg?raw=true)
+![简陋的草图](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/assets/images/1523350653664.jpeg?raw=true)
   
   
 最后，真心祝愿19考研各位，马到功成，金榜题名。
@@ -76,7 +76,7 @@ description: 勤能补拙是良训,一分辛苦一分才。
   
 （附图：截图源自知乎）：
   
- ![简陋的草图](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/images/20180402161915815.JPG?raw=true)
+ ![简陋的草图](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/assets/images/20180402161915815.JPG?raw=true)
 
- ![简陋的草图](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/images/20180402161934325.JPG?raw=true)
+ ![简陋的草图](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/assets/images/20180402161934325.JPG?raw=true)
                                  
