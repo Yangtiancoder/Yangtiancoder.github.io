@@ -2,7 +2,7 @@
 layout: post
 title: 归来衫袖有天香
 category: life
-tags: [总结, 转折]
+tags: [考研]
 description: 勤能补拙是良训,一分辛苦一分才。
 ---
 
