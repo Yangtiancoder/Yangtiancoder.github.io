@@ -31,7 +31,7 @@ LR回归属于概率性判别式模型，之所谓是概率性模型，是因为
 定义：
 
 
-![简陋的草图](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/images/7.png?raw=true)
+![简陋的草图](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/assets/images/7.png?raw=true)
 
 
 
@@ -39,7 +39,7 @@ logistic回归模型：
 
 
 
-![简陋的草图](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/images/8.png?raw=true)
+![简陋的草图](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/assets/images/8.png?raw=true)
 
 
 
@@ -47,7 +47,7 @@ logistic回归模型：
 
 
 
-![简陋的草图](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/images/9.png?raw=true)
+![简陋的草图](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/assets/images/9.png?raw=true)
 
 
 
