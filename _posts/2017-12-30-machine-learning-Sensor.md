@@ -14,7 +14,7 @@ description: 机器学习笔记系列。
 
 先简单的构思下，你觉得感知机是如何工作的？感知机需要几个二进制输入， X1，X2，…Xn ，并产生一个二进制输出：
 
-![简陋的草图](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/images/24.JPG?raw=true)
+![简陋的草图](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/assets/images/24.JPG?raw=true)
 
 
 上图所示的  Perceptron 有三个输入，但是实际的输入可能远多于三个或是少与三个。  Rosenblatt 提出了一个简单的规则来计算输出，他首先引入了  weights（权重）概念， ω1，ω2,...。以实数权重  ω表示输入到输出的重要性，神经元的输出 0 或 1 ，这取决于加权因子（即  weights） 这里写图片描述小于或大于某一阈值。就像权重，阈值为一个实数，是一个神经元的参数。
@@ -66,7 +66,7 @@ f(x)={+1−1if x>=0else
 在二分类问题中，f(x)的值（+1或-1）用于分类x为正样本（+1）还是负样本（-1）。感知机是一种线性分类模型，属于判别模型。我们需要做的就是找到一个最佳的满足w⋅x+b=0的w和b值，即分离超平面（separating hyperplane）。如下图，一个线性可分的感知机模型
 
 
-![简陋的草图](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/images/25.JPG?raw=true)
+![简陋的草图](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/assets/images/25.JPG?raw=true)
 中间的直线即w⋅x+b=0这条直线。
 
 线性分类器的几何表示有：直线、平面、超平面。
@@ -95,7 +95,7 @@ L(w,b)=−∑xiϵMyi(w∗x0+b)
 感知机学习转变成求解损失函数L(w,b)的最优化问题。最优化的方法是随机梯度下降法（stochastic gradient descent），这里采用的就是该方法。关于梯度下降的详细内容，参考wikipedia Gradient descent。下面给出一个简单的梯度下降的可视化图：
 
 
-![简陋的草图](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/images/26.JPG?raw=true)
+![简陋的草图](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/assets/images/26.JPG?raw=true)
 
 上图就是随机梯度下降法一步一步达到最优值的过程，说明一下，梯度下降其实是局部最优。感知机学习算法本身是误分类驱动的，因此我们采用随机梯度下降法。首先，任选一个超平面w0和b0，然后使用梯度下降法不断地极小化目标函数
 
@@ -118,7 +118,7 @@ b:=b+ηyi
 下面给出一个感知器学习的图，比较形象：
 
 
-![简陋的草图](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/images/27.JPG?raw=true)
+![简陋的草图](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/assets/images/27.JPG?raw=true)
 由于上图采取的损失函数不同，所以权值的变化式子有点区别，不过思想都是一样的。
 
 
@@ -158,7 +158,7 @@ f′(x0)=limΔx→0f(x0+Δx)−f(x0)Δx
 感知机使用的学习策略是梯度下降法，而SVM采用的是由约束条件构造拉格朗日函数，然后求偏导令其为0求得极值点。这里特别说明下一般我们的拉格朗日函数是符合凸函数的，因此对于凸函数一定存在极值点，也是唯一的最优解。而一般的非凸函数，只好采用梯度下降法一步一步的求得极值点，如果非凸函数还是采用求导令为0，可能找不到极值点！因为鞍点也是导数为，但却不是极值点的特例，如y = x^3函数。导数为0是函数极值点的必要条件。
 
 
-![](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/images/28.png?raw=true)
+![](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/assets/images/28.JPG?raw=true)
 
 
 感知机的缺点
