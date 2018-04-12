@@ -4,15 +4,14 @@ layout: page
 ---
 
  
- A place to share my thoughts.
 
  你好
 
  很高兴你终于发现我的网站！
 
- 这是一个分享个人经验感悟的地方
+ 这是属于Yangtian的个人blog网站
  
- 记录学习，记录思想，分享生活，留住感动
+ 在这里记录学习，发表观点，分享生活
  
  Every single day without dancing is one day we betrayed of life.
   
