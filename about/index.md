@@ -3,8 +3,8 @@ title: about me
 layout: page
 ---
 
-<blockquote class="blockquote-center">A place to share my thoughts.</blockquote>
-
+ 
+ A place to share my thoughts.
 
  你好
 
@@ -14,14 +14,12 @@ layout: page
  
  记录学习，记录思想，分享生活，留住感动
  
- ---
- 
-  Every single day without dancing is one day we betrayed of life.
+ Every single day without dancing is one day we betrayed of life.
   
-  每一个不曾起舞的日子，都是对生命的辜负。                   ——尼采
+ 每一个不曾起舞的日子，都是对生命的辜负。                   ——尼采
   
 
-  <h2>关于我</h2>
+ <h2>关于我</h2>
   
   A  boy born in 1996.
  
