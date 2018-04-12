@@ -295,7 +295,9 @@ sidebar:
 # Blog rolls
 links_title: Links
 links:
-  nowacoder（我的原博客）: https://blog.csdn.net/yuih344
+  我的原博客: https://blog.csdn.net/yuih344
+  陈文科的个人博客: http://chenwenke.cn/blog/index.html
+  
 #links_title: Links
 #links_layout: block
 #links_layout: inline
