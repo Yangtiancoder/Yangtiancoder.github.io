@@ -22,12 +22,12 @@ layout: page
   
   A  boy born in 1996.
  
--  a student
--  major
+-  A student
+-  Major
    - computer science
 -  Education
    - Chang'an University
--  interest
+-  Interest
    - coding
    - music
    - basketball
