@@ -7,9 +7,8 @@
   </span>
   <span class="author" itemprop="copyrightHolder">{{ site.author }}</span>
 </div>
-<h5>FRIENDS</h5>
+<h6>Links</h6>
                 <ul class="list-inline">
-                    
                        <a href="http://www.cnblogs.com/acm1314/">我以前的博客</a>
                     <a href="https://www.hozen.site/">李浩然的个人博客</a>
                     
@@ -20,15 +19,5 @@
 <a href="http://blog.csdn.net/butterfly5211314">开心就好</a>
                     
                 </ul>
-{% if site.copyright %}
-<div class="powered-by">
-  {{ __.footer.powered | replace: '%s', '<a class="theme-link" href="https://jekyllrb.com">Jekyll</a>') }}
-</div>
 
-<div class="theme-info">
-  {{ __.footer.theme }} -
-  <a class="theme-link" href="https://github.com/simpleyyt/jekyll-theme-next">
-    NexT.{{ site.scheme }}
-  </a>
-</div>
 {% endif %}
