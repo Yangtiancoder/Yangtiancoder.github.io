@@ -20,7 +20,6 @@ layout: page
   
   每一个不曾起舞的日子，都是对生命的辜负。                   ——尼采
   
-  ---
 
   <h3>关于我</h3>
   
@@ -35,7 +34,6 @@ layout: page
    - coding
    - music
    - basketball
-
 
    ---
 
