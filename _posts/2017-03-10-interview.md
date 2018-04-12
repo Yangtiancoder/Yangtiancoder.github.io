@@ -11,27 +11,25 @@ description: 实践出真知，java面试经验。
 
 网站推荐
 
-http://gityuan.com/2016/01/09/java-memory/  内存模型
+<http://gityuan.com/2016/01/09/java-memory/>  内存模型
 
-http://www.guokr.com/post/114121/ Https握手 
+<http://www.guokr.com/post/114121/> Https握手 
 
-http://blog.csdn.net/laner0515/article/details/27692673/ 核心工作原理
+<http://blog.csdn.net/laner0515/article/details/27692673/> 核心工作原理
 
-http://www.cnblogs.com/fanzhidongyzby/p/4098546.html IO
+<http://www.cnblogs.com/fanzhidongyzby/p/4098546.html> IO
 
-http://blog.csdn.net/sszgg2006/article/details/38664789 IO
+<http://www.blogjava.net/bolo/archive/2015/01/20/422296.html> 并发模型
 
-http://www.blogjava.net/bolo/archive/2015/01/20/422296.html 并发模型
+<http://jingyan.baidu.com/article/acf728fd2182e7f8e510a32e.html> 中文编码问题
 
-http://jingyan.baidu.com/article/acf728fd2182e7f8e510a32e.html 中文编码问题
+<http://www.cnblogs.com/200911/p/3965108.html> 内存溢出解决方案
 
-http://www.cnblogs.com/200911/p/3965108.html 内存溢出解决方案
+<http://blog.csdn.net/hguisu/article/details/7445768/> Socket
 
-http://blog.csdn.net/hguisu/article/details/7445768/ Socket
+<http://www.jb51.net/article/19024.htm> SQL优化
 
-http://www.jb51.net/article/19024.htm SQL优化
-
-http://www.360doc.com/content/14/0903/10/15077656_406704297.shtml redis设计与实现
+<http://www.360doc.com/content/14/0903/10/15077656_406704297.shtml> redis设计与实现
 
 
 
