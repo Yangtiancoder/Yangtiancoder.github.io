@@ -21,7 +21,7 @@ layout: page
   每一个不曾起舞的日子，都是对生命的辜负。                   ——尼采
   
 
-  <h3>关于我</h3>
+  <h2>关于我</h2>
   
   A  boy born in 1996.
  
@@ -32,10 +32,10 @@ layout: page
    - Chang'an University
 -  interest
    - coding
-   - music
-   - basketball
+   - music
+   - basketball
+   - movies
 
-   ---
 
   <h3>来勾搭我</h3>
 
