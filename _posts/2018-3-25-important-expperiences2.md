@@ -3,7 +3,7 @@ layout: post
 title: 归来衫袖有天香
 category: life
 tags: [考研]
-description: 勤能补拙是良训,一分辛苦一分才。
+description: 我们坚持一件事情，并不是因为这样做了会有效果，而是坚信，这样做是对的。
 ---
 
 
@@ -71,5 +71,8 @@ description: 勤能补拙是良训,一分辛苦一分才。
   
   
 最后，真心祝愿19考研各位，马到功成，金榜题名。
+
+  
+        
   
   
