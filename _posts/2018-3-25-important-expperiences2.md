@@ -7,7 +7,7 @@ description: 我们坚持一件事情，并不是因为这样做了会有效果�
 ---
 
 
-   - [决心考研篇](http://yangtian.github.io/life/2017/12/25/important-expperiences/)
+   - [决心考研篇](http://Yangtiancoder.github.io/life/2017/12/25/important-expperiences/)
     
 
 录取结束了，成功录取到上海某高校cs专业，首先十分感谢一路陪伴我走过来的人们，没有他们我不可能坚持下来，感恩最后选了自己喜欢的方向，有幸还能继续读书。
