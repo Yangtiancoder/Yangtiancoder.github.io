@@ -73,9 +73,3 @@ description: 勤能补拙是良训,一分辛苦一分才。
 最后，真心祝愿19考研各位，马到功成，金榜题名。
   
   
-（附图：截图源自知乎）：
-  
- ![简陋的草图](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/assets/images/20180402161915815.JPG?raw=true)
-
- ![简陋的草图](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/assets/images/20180402161934325.JPG?raw=true)
-                                 
