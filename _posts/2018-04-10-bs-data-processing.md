@@ -11,7 +11,7 @@ description: 毕设涉及到的内容。
 前言：据说python也即将列入中学学习内容，意味着高中生不仅coding可能即将开始大面积搞AI了,全面被吊打被预警。。。企业招聘基本开发岗几乎也是基础C系列或java一种，加上脚本语言语言python之类的，至于python应用多么广泛就不说了，python发展感觉还是比较具有潜力的，由于具有代码简单易读，移植性好，维护成本低等等优点，深受工业界和学术界的喜爱，总之还是得好好搞起来。
 
 
-##配置##
+## 配置
 
   **1.环境安装配置**
 
@@ -51,7 +51,7 @@ description: 毕设涉及到的内容。
   ![](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/assets/images/p3.png?raw=true)
 
 
-##数据采集基本操作##
+## 数据采集基本操作
 
    
   常用的数据分析文件格式有txt,csv（主要）,json等等。
@@ -99,7 +99,7 @@ description: 毕设涉及到的内容。
    DataFrame，表格型数据结构，每列可以是不同的数据类型，可表示二维或更高维的数据
 
 
-##练习代码##
+## 练习代码
 
  ```python
     
