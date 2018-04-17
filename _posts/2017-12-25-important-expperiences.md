@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 君不见长松卧壑困风霜,时来屹立扶明堂
+title: 懦夫也曾雄心万丈
 category: life
 tags: [转折]
 description: 孩儿立志出乡关，学不成名誓不还。
