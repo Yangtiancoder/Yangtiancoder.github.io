@@ -1,9 +1,9 @@
 ---
 layout: post
-title: python入门及数据基本操作
+title: python入门及数据基本处理
 category: blog
 tags: [python,毕设]
-description: 毕设涉及到的学习内容。
+description: 毕设涉及到的内容。
 ---
 
 
@@ -11,7 +11,7 @@ description: 毕设涉及到的学习内容。
 前言：据说python也即将列入中学学习内容，意味着高中生不仅coding可能即将开始大面积搞AI了,全面被吊打被预警。。。企业招聘基本开发岗几乎也是基础C系列或java一种，加上脚本语言语言python之类的，至于python应用多么广泛就不说了，python发展感觉还是比较具有潜力的，由于具有代码简单易读，移植性好，维护成本低等等优点，深受工业界和学术界的喜爱，总之还是得好好搞起来。
 
 
-##配置
+##配置##
 
   **1.环境安装配置**
 
@@ -51,7 +51,7 @@ description: 毕设涉及到的学习内容。
   ![](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/assets/images/p3.png?raw=true)
 
 
-##数据采集基本操作
+##数据采集基本操作##
 
    
   常用的数据分析文件格式有txt,csv（主要）,json等等。
@@ -69,14 +69,12 @@ description: 毕设涉及到的学习内容。
     file_obj.read() #读取整个文件内容
     file_obj.readline() #逐行读取
     file_obj.readlines() #返回列表，列表中的每个元素是行内容
-
    ```
 
    写操作
    ```python
     file_obj.write()# 将内容写入文件
     file_obj.writelines() #将字符串列表内容逐行写入文件
-
    ```
 
   **csv基本操作**
@@ -85,14 +83,13 @@ description: 毕设涉及到的学习内容。
    读操作
    ```python
    df_obj = pd.read_csv()#返回DataFrame类型的数据
-
    ```
 
    写操作
    ```python
     fdf_obj.to_csv()
    ```
-   pandas介绍：
+   pandas简要介绍：
 
    Python Data Analysis Library 或 pandas 是基于NumPy 的一种工具，该工具是为了解决数据分析任务而创建的。Pandas 纳入了大量库和一些标准的数据模型，提供了高效地操作大型数据集所需的工具。pandas提供了大量能使我们快速便捷地处理数据的函数和方法。你很快就会发现，它是使Python成为强大而高效的数据分析环境的重要因素之一。
 
@@ -102,7 +99,7 @@ description: 毕设涉及到的学习内容。
    DataFrame，表格型数据结构，每列可以是不同的数据类型，可表示二维或更高维的数据
 
 
-##练习代码
+##练习代码##
 
  ```python
     
