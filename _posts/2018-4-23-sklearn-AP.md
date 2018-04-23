@@ -15,19 +15,19 @@ description: sklearn进行AP聚类算法。
 
    这里介绍一下导入的几个模块，其实sklearn是一个机器学习算法库，并没有其他模块是必须的，只是可能在算法的使用中涉及到该模块，所以需要导入。
 
-   numpy 提供了python对多维数组对象的支持。numpy支持高级大量的维度数组与矩阵运算，此外也针对数组运算提供大量的数学函数库。
+   -numpy 提供了python对多维数组对象的支持。numpy支持高级大量的维度数组与矩阵运算，此外也针对数组运算提供大量的数学函数库。
 
-   scipy 主要进行数值计算，同时支持矩阵运算，并提供了很多高等数据处理功能，比如积分，傅里叶变换，微分方程求解等。
+   -scipy 主要进行数值计算，同时支持矩阵运算，并提供了很多高等数据处理功能，比如积分，傅里叶变换，微分方程求解等。
 
-   matplotlib 作图模块，解决可视化问题
+   -matplotlib 作图模块，解决可视化问题
 
  ## sklearn包中的AP算法
 
-    **1.函数**
+   **1.函数**
 
          sklearn.cluster.AffinityPropagation
 
-    **2.主要参数**
+   **2.主要参数**
 
          damping : 阻尼系数，取值[0.5,1)
 
@@ -37,7 +37,7 @@ description: sklearn进行AP聚类算法。
 
          preference :参考度
 
-    **3.主要属性**
+   **3.主要属性**
 
         cluster_centers_indices_ : 存放聚类中心的数组
 
@@ -45,7 +45,7 @@ description: sklearn进行AP聚类算法。
 
         n_iter_ : 迭代次数
 
-    **4.示例**     
+   **4.示例**     
 
         preference(即p值)取不同值时的聚类中心的数目在代码中注明了。
 
@@ -97,9 +97,7 @@ for idx in cluster_centers_indices:
 程序的目标是，读入一个二维矩阵，代表121个点即类似于官网demo的Xn,之后按照问题处理内容，更新相似度矩阵计算公式，之后设置参考度输出即可。
 （PS：我这里处理问题类似于，有121个点有一维的特征，一维特征在data表中读入，之后按照特征进行聚集，特征相似的会被聚集到同一类别，输出聚类中心点，特征数据我是从dataframe结构中导出的，会有一些脏数据，代码中同时包括一些脏数据的处理）
 
-
 ```python
-
 # -*- coding: utf-8 -*-
 """
     作者:     田洋
@@ -136,10 +134,9 @@ cluster_centers_indices = ap.cluster_centers_indices_
 
 for idx in cluster_centers_indices:
     print(dataSet[idx])
-
 ```
 
-[数据集data.txt](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/_posts/data.txt)
+[数据集data.txt](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/_posts/data.txt)<br>
 [数据集jvzhen.txt](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/_posts/jvzhen.txt)
 
 
