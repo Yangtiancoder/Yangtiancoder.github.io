@@ -20,8 +20,8 @@ description: sklearn进行AP聚类算法。
    -  scipy 主要进行数值计算，同时支持矩阵运算，并提供了很多高等数据处理功能，比如积分，傅里叶变换，微分方程求解等。
 
    -  matplotlib 作图模块，解决可视化问题
-
- ## sklearn包中的AP算法
+   
+## sklearn中的AP算法
 
    **1.函数**
 
