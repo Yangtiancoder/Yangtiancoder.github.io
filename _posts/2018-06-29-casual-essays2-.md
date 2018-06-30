@@ -3,10 +3,7 @@ layout: post
 title: 毕业快乐（二）
 category: life
 tags: [随笔]
-description:
-我知道 那些夏天  
-就像青春一样回不来  
-代替梦想的也只能是勉为其难
+description:我知道 那些夏天  就像青春一样回不来  代替梦想的也只能是勉为其难
 ---
   
 [毕业快乐（一）](http://yangtiancoder.github.io/life/2018/06/02/casual-essays/)  
