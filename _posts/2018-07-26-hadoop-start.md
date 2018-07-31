@@ -3,7 +3,7 @@ layout: post
 title: hadoop介绍及环境搭建
 category: blog
 tags: [hadoop]
-description: 菜鸟入门
+description: 菜鸟入门。
 ---
 
 Hadoop是一个分布式系统基础架构，由Apache基金会所开发。用户可以在不了解分布式底层细节的情况下，开发分布式程序。充分利用集群的威力进行高速运算和存储。 Hadoop实现了一个分布式文件系统（Hadoop Distributed File System），简称HDFS。HDFS有高容错性的特点，并且设计用来部署在低廉的（low-cost）硬件上；而且它提供高传输率（high throughput）来访问应用程序的数据，适合那些有着超大数据集（large data set）的应用程序。HDFS放宽了（relax）POSIX的要求，可以以流的形式访问（streaming access）文件系统中的数据。Hadoop的框架最核心的设计就是：HDFS和MapReduce。HDFS为海量的数据提供了存储，则MapReduce为海量的数据提供了计算。
@@ -48,15 +48,15 @@ Hadoop是一个分布式系统基础架构，由Apache基金会所开发。用�
 
  使用ssh进行无密码验证登录：
 
- 　　1.创建ssh-key，这里我们采用rsa方式，使用如下命令：
+  1.创建ssh-key，这里我们采用rsa方式，使用如下命令：
  　　
         ssh-keygen -t rsa -P ""
 
-     2.出现一个图形，出现的图形就是密码，不用管它
+  2.出现一个图形，出现的图形就是密码，不用管它
     
         cat ~/.ssh/id_rsa.pub >> authorized_keys(好像是可以省略的)
  
-     3.然后即可无密码验证登录了，如下：
+  3.然后即可无密码验证登录了，如下：
     
         ssh localhost
    
@@ -67,8 +67,7 @@ Hadoop是一个分布式系统基础架构，由Apache基金会所开发。用�
 ## 下载Hadoop安装包
 
 下载Hadoop安装也有两种方式
-
-　　　　
+　　　
 1.直接上官网进行下载，http://mirrors.hust.edu.cn/apache/hadoop/core/stable/hadoop-2.7.1.tar.gz
 
 2.使用shell进行下载，命令如下：wget http://mirrors.hust.edu.cn/apache/hadoop/core/stable/hadoop-2.7.1.tar.gz
@@ -85,52 +84,15 @@ Hadoop是一个分布式系统基础架构，由Apache基金会所开发。用�
 
 需要配置的文件如下，hadoop-env.sh，core-site.xml，mapred-site.xml.template，hdfs-site.xml，所有的文件均位于hadoop2.7.1/etc/hadoop下面，具体需要的配置如下：
 
-　　1.core-site.xml 配置如下：　
-  
-     ```python
-　　　　<configuration>
-　　　　　　<property>
-　　　　　　　　<name>hadoop.tmp.dir</name>
-　　　　　　　　<value>file:/home/leesf/program/hadoop/tmp</value>
-　　　　　　　　<description>Abase for other temporary directories.</description>
-　　　　　　</property>
-　　　　　　<property>
-　　　　　　　　<name>fs.defaultFS</name>
-　　　　　　　　<value>hdfs://localhost:9000</value>
-　　　　　　</property>
-　　　　</configuration>
-       ```
-      
+1.core-site.xml 配置如下：　
+
 　　其中的hadoop.tmp.dir的路径可以根据自己的习惯进行设置。
 
-　　2.mapred-site.xml.template配置如下：　
+2.mapred-site.xml.template配置如下：　
   
-    ```xml
-　　　　<configuration>
-　　　　　　<property>
-　　　　　　　　<name>mapred.job.tracker</name>
-　　　　　　　　<value>localhost:9001</value>
-　　　　　　</property>
-　　　　</configuration>
-     ```
-　　3.hdfs-site.xml配置如下：
-  
-    ```xml
-　　　　<configuration>
-　　　　　　<property>
-　　　　　　　　<name>dfs.replication</name>
-　　　　　　　　<value>1</value>
-　　　　　　</property>
-　　　　　　<property>
-　　　　　　　　<name>dfs.namenode.name.dir</name>
-　　　　　　　　<value>file:/home/leesf/program/hadoop/tmp/dfs/name</value>
-　　　　　　</property>
-　　　　　　<property>
-　　　　　　　　<name>dfs.datanode.data.dir</name>
-　　　　　　　　<value>file:/home/leesf/program/hadoop/tmp/dfs/data</value>
-　　　　　　</property>
-　　　　</configuration>
-        ```
+   
+3.hdfs-site.xml配置如下：
+    
 　　其中dfs.namenode.name.dir和dfs.datanode.data.dir的路径可以自由设置，最好在hadoop.tmp.dir的目录下面。
 
 　　补充，如果运行Hadoop的时候发现找不到jdk，可以直接将jdk的路径放置在hadoop.env.sh里面，具体如下：
@@ -139,7 +101,7 @@ Hadoop是一个分布式系统基础架构，由Apache基金会所开发。用�
 
 ## 启动hadoop
 
- 1.初始化HDFS系统
+  1.初始化HDFS系统
 
 　　　　在hadop2.7.1目录下使用如下命令：
 
@@ -166,6 +128,7 @@ Hadoop是一个分布式系统基础架构，由Apache基金会所开发。用�
         ![](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/assets/images/hadoop1-5.png?raw=true)
 
 　      表示数据DataNode和NameNode都已经开启
+
   3.查看进程信息
 
 　　　　使用如下命令查看进程信息
