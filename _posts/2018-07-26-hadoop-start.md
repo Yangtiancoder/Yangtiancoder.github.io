@@ -178,7 +178,7 @@ sbin/start-dfs.sh，成功的截图如下：
 
   4.查看Web UI
 
-　在浏览器中输入http://localhost:50070，即可查看相关信息，截图如下：
+　在浏览器中输入 http://localhost:50070 ，即可查看相关信息，截图如下：
 
 ![](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/assets/images/hadoop1-7.png?raw=true)
 
