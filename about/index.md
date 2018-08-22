@@ -26,12 +26,10 @@ layout: page
 -  Major
    - computer science
 -  Education
-   - Chang'an University
    - Fudan University
 -  Interest
    - music
    - basketball
-   - movies
 
 
   <h3>来勾搭我</h3>
