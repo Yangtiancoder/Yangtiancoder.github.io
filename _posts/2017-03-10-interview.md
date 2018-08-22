@@ -2,7 +2,7 @@
 layout: post
 title: 总结的JAVA面试干货
 category: blog
-tags: [Java, 面试, 随笔]
+tags: [Java, 面试]
 description: 实践出真知，java面试经验。
 ---
                                                                                                
