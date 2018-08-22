@@ -35,7 +35,7 @@ description: 要开学啦。
 
 ![动图](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/assets/images/img-006IPlJt.gif?raw=true)
 
-原来以为自己想写的东西挺多的，写完之后发现好像真没什么好说的，就这么多，马上开始新的学习生涯了了，努力做一个彩虹般绚丽的人，那样太酷了。
+原来以为自己想写的东西挺多的，写完之后发现好像真没什么好说的，就这么多，马上开始新的学习生涯了，努力做一个彩虹般绚丽的人，那样我就太酷了。
 
 
 
