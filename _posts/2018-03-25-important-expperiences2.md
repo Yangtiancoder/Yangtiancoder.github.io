@@ -2,7 +2,7 @@
 layout: post
 title: 归来衫袖有天香
 category: life
-tags: [考研]
+tags: [随笔]
 description: 我们坚持一件事情，并不是因为这样做了会有效果，而是坚信，这样做是对的。
 ---
 
