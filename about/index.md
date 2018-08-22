@@ -22,7 +22,7 @@ layout: page
   
   A  boy born in 1996.
  
--  A student
+-  Master degree candidate
 -  Major
    - computer science
 -  Education
