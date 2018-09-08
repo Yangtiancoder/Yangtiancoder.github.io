@@ -2,7 +2,7 @@
 layout: post
 title: 人工神经网络
 category: blog
-tags: [深度学习]
+tags: [ 机器学习, 深度学习]
 description: 人工神经网络（Artificial Neural Network，即ANN ），是20世纪80 年代以来人工智能领域兴起的研究热点。
 ---
 
