@@ -1,3 +1,4 @@
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 ---
 layout: post
 title: 人工神经网络
@@ -22,7 +23,7 @@ MP神经元模型是1943年，由WarrenMcCulloch和WalterPitts提出的。在这
 把许多个这样的神经元模型按照一定的层次连接起来，就得到了神经网络。 
 
 ## 感知机和多层网络 
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
 感知机由两层神经元组成，输入层接受外界输入信号后传递给输出层，输出层是M-P神经元，亦称“阈值逻辑单元”。如图所示：
 
 除此之外，注意到$y=f\left(\mathbf{x}^T\mathbf{w}-\theta\right)=f\left(\sum_iw_ix_i-\theta\right)$，阈值θ可以看做固定输入为-1.0的”哑结点”其对应的权重为wn+1,这样权重和阈值的学习可以统一为权重学习。 
