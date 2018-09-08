@@ -119,6 +119,7 @@ wi←wi+Δwi
 
 **参考资料**
 
-<https://blog.csdn.net/zouxy09/article/details/8775518>
+<https://blog.csdn.net/zouxy09/article/details/8775518>  
+
 《机器学习》-周志华
 
