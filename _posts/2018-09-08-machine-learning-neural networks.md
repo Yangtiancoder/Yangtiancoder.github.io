@@ -28,6 +28,7 @@ MP神经元模型是1943年，由WarrenMcCulloch和WalterPitts提出的。在这
 为得到可接受的权向量，我们会从随机的权值开始，反复地应用这个感知机到每个训练样例，只要它误分类样例就修改感知机的权值。重复这个过程，直到感知机正确分类所有的样例。每一步根据感知机训练法则(perceptron training rule)来修改权值，也就是修改与输入 xi 对应的权 wi，法则如下：
 
 ![](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/assets/images/ANN2.png?raw=true)
+  
 wi←wi+Δwi  
 
 Δwi=η(t−o)xi  
