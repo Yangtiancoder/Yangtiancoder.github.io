@@ -51,4 +51,7 @@ public class Solution {
         //如果根节点对应的上，那么就分别去子节点里面匹配
         return doesTree1HaveTree2(node1.left,node2.left) && doesTree1HaveTree2(node1.right,node2.right);
     }
-```
+```  
+  
+注意：
+先对相等进行判断，即使头节点相等其余不等之后还能继续向下判断，判断是否含有就是需要至少把前面的树遍历一遍，即使不想等，也需要继续向下判断。
