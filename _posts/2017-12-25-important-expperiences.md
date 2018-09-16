@@ -2,7 +2,7 @@
 layout: post
 title: 懦夫也曾雄心万丈
 category: life
-tags: [转折, 随笔]
+tags: [随笔]
 description: 孩儿立志出乡关，学不成名誓不还。
 ---
 
