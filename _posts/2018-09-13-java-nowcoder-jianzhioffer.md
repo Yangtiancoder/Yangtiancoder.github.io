@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 牛客练习题目
+title: 二进制中1的个数
 category: blog
 tags: [Java, 剑指offer]
-description: 二进制中1的个数。
+description: 注意二进制技巧。
 ---
 
   
