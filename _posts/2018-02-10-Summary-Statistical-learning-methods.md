@@ -2,7 +2,7 @@
 layout: post
 title: 《统计学习方法》
 category: blog
-tags: [机器学习, 总结]
+tags: [机器学习]
 description: 统计学习方法总述。
 ---
 
