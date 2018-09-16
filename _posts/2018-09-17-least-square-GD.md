@@ -30,8 +30,8 @@ description: 专业课学习及网课笔记。
 
 ![Alt text](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/assets/images/a9c4d5f6gy1fe0p8iqqphj212a0n241f.jpg?raw=true)
 
-其中gt=∂L(θt)/∂w
-w是一个参数，不是一组
+其中gt=∂L(θt)/∂w  
+w是一个参数，不是一组  
 σt:参数的所有微分的均方根，对于每个参数都是不一样的。
 
 化简可得：
