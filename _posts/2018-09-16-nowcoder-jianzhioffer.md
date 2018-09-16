@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 牛客练习题目
+title: 树的子结构
 category: blog
 tags: [Java, 剑指offer]
-description: 树的子结构。
+description: 练习题目。
 ---
 
   
