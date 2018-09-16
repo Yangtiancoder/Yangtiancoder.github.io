@@ -3,7 +3,7 @@ layout: post
 title: 顺时针打印矩阵
 category: blog
 tags: [Java, 剑指offer]
-description: 练习题目。
+description: 注意循环边界等问题。
 ---
 
   
