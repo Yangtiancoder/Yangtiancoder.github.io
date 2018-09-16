@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 牛客练习题目
+title: 旋转数组的最小数字
 category: blog
 tags: [Java, 剑指offer]
-description: 旋转数组的最小数字。
+description: 练习题目。
 ---
 
   
