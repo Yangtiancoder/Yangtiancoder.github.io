@@ -1,11 +1,11 @@
 ---
 layout: post
-title:慎用equals方法和==
+title: 慎用equals方法和==
 category: blog
-tags: [java]
-description: 用法小结
+tags: [Java]
+description:用法小结。
 ---
-  
+
   
 前言：看到这个问题痛心疾首，忽然想起当年面试的时候问过，正好给说反了，十分尴尬，如今再次看到这个问题，顺一下思路，整理了一下。
 
