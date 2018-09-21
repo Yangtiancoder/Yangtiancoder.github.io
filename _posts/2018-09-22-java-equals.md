@@ -3,7 +3,7 @@ layout: post
 title: 慎用equals方法和==
 category: blog
 tags: [Java]
-description:用法小结。
+description: 用法小结。
 ---
 
   
