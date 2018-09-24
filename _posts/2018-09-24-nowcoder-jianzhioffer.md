@@ -11,19 +11,6 @@ description: 练习题目。
 
 
 ```java
-import java.util.ArrayList;
-/**
-public class TreeNode {
-    int val = 0;
-    TreeNode left = null;
-    TreeNode right = null;
- 
-    public TreeNode(int val) {
-        this.val = val;
- 
-    }
-}
-*/
 
 public class Solution {
     public void FindNumsAppearOnce(int[] array, int[] num1, int[] num2)    {
