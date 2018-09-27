@@ -11,7 +11,6 @@ description: 练习题目。
 
 
 ```java
-
 public class Solution {
     public int Add(int num1,int num2) {
         while (num2!=0) {
@@ -22,7 +21,6 @@ public class Solution {
         return num1;
     }
 }
-     
 ```
 
 解题思路：  
