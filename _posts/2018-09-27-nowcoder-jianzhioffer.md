@@ -10,7 +10,8 @@ description: 练习题目。
 写一个函数，求两个整数之和，要求在函数体内不得使用+、-、*、/四则运算符号。  
 
 
-```java
+```java  
+
 public class Solution {
     public int Add(int num1,int num2) {
         while (num2!=0) {
@@ -20,7 +21,8 @@ public class Solution {
         }
         return num1;
     }
-}
+}  
+
 ```
 
 解题思路：  
