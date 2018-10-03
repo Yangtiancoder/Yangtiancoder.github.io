@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Activity生命周期
+title: Android中Activity生命周期实践
 category: blog
 tags: [Android, Java]
-description: Activity生命周期相关及代码实践。
+description: Activity生命周期相关。
 ---
 
 
