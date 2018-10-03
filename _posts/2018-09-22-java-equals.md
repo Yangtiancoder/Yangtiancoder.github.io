@@ -95,12 +95,10 @@ public class test {
 ```
 
 判断条件：  
-若当前对象和比较的对象是同一个对象，即return true。 
-若当前传入的对象不是String类型，则直接返回false.
-若当前传入的对象是String类型，则比较两个字符串的长度，即value.length的长度。          
-若长度不相同，则return false.
-若长度相同，则按照数组value中的每一位进行比较，不同，则返回false。若每一位都相同，则返回true。  
+若当前对象和比较的对象是同一个对象，即return true。  
+若当前传入的对象不是String类型，则直接返回false。  
+若当前传入的对象是String类型，则比较两个字符串的长度，即value.length的长度。          
+若长度不相同，则return false。  
+若长度相同，则按照数组value中的每一位进行比较，不同，则返回false。若每一位都相同，则返回true。  
 
----------------------
 
-本文来自 温柔狠角色 的CSDN 博客 ，全文地址请点击：https://blog.csdn.net/qq_25827845/article/details/53868815?utm_source=copy 
