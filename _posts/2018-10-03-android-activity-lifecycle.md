@@ -273,13 +273,13 @@ Android是使用任务（Task）来管理活动的，一组存放在栈里的活
 
    **点击第一个按钮启动 NormalActivity：** （由于 NormalActivity已经把 MainActivity完全遮挡住，）onPause()、 onStop()被执行  
 
-   **按下 Back键返回 MainActivity** （由于之前 MainActivity已经进入了停止状态）onRestart()、onStart()、onResume()被执行  
+   **按下 Back键返回 MainActivity：** （由于之前 MainActivity已经进入了停止状态）onRestart()、onStart()、onResume()被执行  
 
-   **再点击第二个按钮，启动 DialogActivity** （DialogActivity并没有完全遮挡住 MainActivity） onPause()被执行  
+   **再点击第二个按钮，启动 DialogActivity：** （DialogActivity并没有完全遮挡住 MainActivity） onPause()被执行  
 
-   **Back键返回 MainActivity** onResume()被执行  
+   **Back键返回 MainActivity：** onResume()被执行  
 
-   **在MainActivity按下 Back键退出程序** onPause()、onStop()、onDestroy()被执行  
+   **在MainActivity按下 Back键退出程序：** onPause()、onStop()、onDestroy()被执行  
 
 ##  Activity内存被回收问题
 
@@ -289,7 +289,7 @@ Android是使用任务（Task）来管理活动的，一组存放在栈里的活
 
 **情景2:** 如果活动A中存在临时数据和状态，那在重新创建A时，该如何恢复？
 
-Bundle提供了一些列保存数据的方法。在Activity中重写void onSaveInstanceState(Bundle outState )方法即可保存临时数据。  
+Bundle提供了一些列保存数据的方法。在Activity中重写void onSaveInstanceState(Bundle outState)方法即可保存临时数据。  
 
 ```java
 /* 如果Activity被回收，那么会自动调用on onSaveInstanceState(Bundle outState )方法,Bundle 类型的参数，使用 putString()方法保存字符串，使用 putInt()方法保存整型数据*/
