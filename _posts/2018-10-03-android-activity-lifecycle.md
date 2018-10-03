@@ -271,23 +271,23 @@ Android是使用任务（Task）来管理活动的，一组存放在栈里的活
 
    **然后运行程序：** onCreate()、onStart()、onResume() 方法被执行  
 
-   点击第一个按钮启动 NormalActivity：（由于 NormalActivity已经把 MainActivity完全遮挡住，）onPause()、 onStop()被执行  
+   **点击第一个按钮启动 NormalActivity：** （由于 NormalActivity已经把 MainActivity完全遮挡住，）onPause()、 onStop()被执行  
 
-   按下 Back键返回 MainActivity（由于之前 MainActivity已经进入了停止状态）onRestart()\onStart()\onResume()被执行  
+   **按下 Back键返回 MainActivity** （由于之前 MainActivity已经进入了停止状态）onRestart()、onStart()、onResume()被执行  
 
-   然后再点击第二个按钮，启动 DialogActivity（DialogActivity并没有完全遮挡住 MainActivity） onPause()被执行  
+   **再点击第二个按钮，启动 DialogActivity** （DialogActivity并没有完全遮挡住 MainActivity） onPause()被执行  
 
-   Back键返回 MainActivity，onResume()被执行  
+   **Back键返回 MainActivity** onResume()被执行  
 
-   最后在 MainActivity按下 Back键退出程序onPause()、onStop()、onDestroy()被执行  
+   **在MainActivity按下 Back键退出程序** onPause()、onStop()、onDestroy()被执行  
 
 ##  Activity内存被回收问题
 
-**情景1:**应用中有一个Activity A, 用户在A的基础上启动了 B，A就进入停止状态，但是由于系统内存不足，将活动A回收掉了，此时用户按下Back键返回活动A，会出现什么情况了？   
+**情景1:** 应用中有一个Activity A, 用户在A的基础上启动了 B，A就进入停止状态，但是由于系统内存不足，将活动A回收掉了，此时用户按下Back键返回活动A，会出现什么情况了？   
 
 其实依然会正常显示活动A的，只是这时不再执行onRestart()方法，而是会执行A的onCreate()方法，因为Activity A在这种情况下会被重新创建一次。（被销毁的Activity，只能被重新创建）。
 
-**情景2:**如果活动A中存在临时数据和状态，那在重新创建A时，该如何恢复？
+**情景2:** 如果活动A中存在临时数据和状态，那在重新创建A时，该如何恢复？
 
 Bundle提供了一些列保存数据的方法。在Activity中重写void onSaveInstanceState(Bundle outState )方法即可保存临时数据。  
 
