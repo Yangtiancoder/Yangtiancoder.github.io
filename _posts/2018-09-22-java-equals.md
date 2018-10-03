@@ -51,3 +51,56 @@ public class test {
 ```
 可能会产生疑问，String bb="ab"是一种非常特殊的形式,和new（）有本质的区别。当声明这样的一个字符串后，JVM会在常量池中先查找有有没有一个值为"ab"的对象,如果有,就会把它赋给当前引用.即原来那个引用和现在这个引用指点向了同一对象,如果没有,则在常量池中新创建一个"ab"。
 而String b = new String("ab")和其它任何对象一样.每调用一次就产生一个对象。
+
+## equals在string中源码
+
+```java
+/**
+     * Compares this string to the specified object.  The result is {@code
+     * true} if and only if the argument is not {@code null} and is a {@code
+     * String} object that represents the same sequence of characters as this
+     * object.
+     *
+     * @param  anObject
+     *         The object to compare this {@code String} against
+     *
+     * @return  {@code true} if the given object represents a {@code String}
+     *          equivalent to this string, {@code false} otherwise
+     *
+     * @see  #compareTo(String)
+     * @see  #equalsIgnoreCase(String)
+     */
+    public boolean equals(Object anObject) {
+        if (this == anObject) {
+            return true;
+        }
+        if (anObject instanceof String) {
+            String anotherString = (String) anObject;
+            int n = value.length;
+            if (n == anotherString.value.length) {
+                char v1[] = value;
+                char v2[] = anotherString.value;
+                int i = 0;
+                while (n-- != 0) {
+                    if (v1[i] != v2[i])
+                            return false;
+                    i++;
+                }
+                return true;
+            }
+        }
+        return false;
+    }
+
+```
+
+判断条件：  
+若当前对象和比较的对象是同一个对象，即return true。 
+若当前传入的对象不是String类型，则直接返回false.
+若当前传入的对象是String类型，则比较两个字符串的长度，即value.length的长度。          
+若长度不相同，则return false.
+若长度相同，则按照数组value中的每一位进行比较，不同，则返回false。若每一位都相同，则返回true。  
+
+---------------------
+
+本文来自 温柔狠角色 的CSDN 博客 ，全文地址请点击：https://blog.csdn.net/qq_25827845/article/details/53868815?utm_source=copy 
