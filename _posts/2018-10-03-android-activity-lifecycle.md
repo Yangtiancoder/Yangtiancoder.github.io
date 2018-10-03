@@ -2,7 +2,7 @@
 layout: post
 title: Activity生命周期
 category: blog
-tags: [Android，Java]
+tags: [Android, Java]
 description: Activity生命周期相关及代码实践。
 ---
 
