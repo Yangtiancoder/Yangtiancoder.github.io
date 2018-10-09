@@ -2,7 +2,7 @@
 layout: post
 title: Android组件之BroadcastReceiver
 category: blog
-tags: [Android，Java]
+tags: [Android, Java]
 description: Android广播及代码实践。
 ---
 
