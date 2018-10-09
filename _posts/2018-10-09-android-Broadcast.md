@@ -110,8 +110,8 @@ public class BootCompleteReceiver extends BroadcastReceiver {
  ```
  静态注册在AndroidManifest.xml中，我们会发现系统已经为我们做出了注册，我们修改如下：
  ```xml
- <?xml version="1.0" encoding="utf-8"?>
- <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  <?xml version="1.0" encoding="utf-8"?>
+  <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.broadcasttest">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -143,7 +143,7 @@ public class BootCompleteReceiver extends BroadcastReceiver {
             </intent-filter>
         </receiver>
     </application>
- </manifest>
+  </manifest>
  ```  
   由于Android系统启动完成后会发出一条值为android.permission.RECEIVE_BOOT_COMPLETED的广播，因此我们 标签里添加了相应的action。  监听系统开机广播也是需要声明权限的，我们使用标签又加入一条android.permission.RECEIVE_BOOT_COMPLETED权限。将模拟器重新启动就可以收到开机广播了。
 
@@ -153,8 +153,8 @@ public class BootCompleteReceiver extends BroadcastReceiver {
 
   **标准广播**
   
-  -  定义一个广播接收器，新建一个MyBroadcastReceiver，代码：
-  ```java
+  -  定义一个广播接收器，新建一个MyBroadcastReceiver，代码如下：  
+```java
   public class MyBroadcastReceiver extends BroadcastReceiver {
 
     @Override
@@ -162,10 +162,11 @@ public class BootCompleteReceiver extends BroadcastReceiver {
         Toast.makeText(context,"received in MyBroadcastReceiver",Toast.LENGTH_SHORT).
         show();
     }
- }
-  ```
-  -  以上是通过快捷方式创建的广播接收器，所以配置文件里面已经有了receiver标签，修改标签内容，即添加过滤者，代码：
-  ```xml
+  }
+ ```
+  -  以上是通过快捷方式创建的广播接收器，所以配置文件里面已经有了receiver标签，修改标签内容，即添加过滤者，代码：  
+  
+```xml
   <receiver
     android:name=".MyBroadcastReceiver"
     android:enabled="true"
@@ -175,10 +176,10 @@ public class BootCompleteReceiver extends BroadcastReceiver {
         </action>
     </intent-filter>
  </receiver>
-  ```
-  这里让MyBroadcastReceiver接收一条值为com.beidou.broadcasttest.MY_BROADCAST的广播，因此待会在发送广播的时候，我们需要发出这样的一条广播。
-
+```
+ 这里让MyBroadcastReceiver接收一条值为com.beidou.broadcasttest.MY_BROADCAST的广播，因此待会在发送广播的时候，我们需要发出这样的一条广播。
   -  修改activity_main.xml以及MainActivity中的代码：
+  
   ```java
   Button button = (Button) findViewById(R.id.button);
   button.setOnClickListener(new View.OnClickListener() {
@@ -188,7 +189,8 @@ public class BootCompleteReceiver extends BroadcastReceiver {
         sendBroadcast(intent);
     }
  });
-  ```
+  ```  
+  
   ```xml
   <Button
     android:id="@+id/button"
@@ -203,9 +205,8 @@ public class BootCompleteReceiver extends BroadcastReceiver {
   3. 由于广播是使用Intent进行传递的，因此你还可以在Intent中携带数据传递给广播接收器。
 
   **有序广播**  
-
   -  调用sendOrderedBroadcast()方法发送广播// 发送有序广播广播.第一个参数是intent,第二个参数是与权限有关的字符串，这里传入null
-  -  注册广播时需要定义顺序值android:priority，代码：
+  -  注册广播时需要定义顺序值android:priority，代码如下：
   ```xml
   <receiver
     android:name=".MyBroadcastReceiver"
