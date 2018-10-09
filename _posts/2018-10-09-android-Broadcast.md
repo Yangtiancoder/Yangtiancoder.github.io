@@ -97,7 +97,7 @@ Android中的广播主要可以分为两种类型,标准广播和有序广播。
  
  我们可以通过AS中的快捷操作来完成，右键项目New-Other-BroadcastReceiver，按操作创建一个BootCompleteReceiver
 
- 同样修改BootCompleteReceiver中的代码如下：
+ -  同样修改BootCompleteReceiver中的代码如下：
  ```java
 public class BootCompleteReceiver extends BroadcastReceiver {
 
@@ -108,7 +108,7 @@ public class BootCompleteReceiver extends BroadcastReceiver {
 }
 
  ```
- 静态注册在AndroidManifest.xml中，我们会发现系统已经为我们做出了注册，我们修改如下：
+ -  静态注册在AndroidManifest.xml中，我们会发现系统已经为我们做出了注册，我们修改如下：
  ```xml
   <?xml version="1.0" encoding="utf-8"?>
   <manifest xmlns:android="http://schemas.android.com/apk/res/android"
@@ -145,9 +145,9 @@ public class BootCompleteReceiver extends BroadcastReceiver {
     </application>
   </manifest>
  ```  
-  由于Android系统启动完成后会发出一条值为android.permission.RECEIVE_BOOT_COMPLETED的广播，因此我们 标签里添加了相应的action。  监听系统开机广播也是需要声明权限的，我们使用标签又加入一条android.permission.RECEIVE_BOOT_COMPLETED权限。将模拟器重新启动就可以收到开机广播了。
+由于Android系统启动完成后会发出一条值为android.permission.RECEIVE_BOOT_COMPLETED的广播，因此我们 标签里添加了相应的action。  监听系统开机广播也是需要声明权限的，我们使用标签又加入一条android.permission.RECEIVE_BOOT_COMPLETED权限。将模拟器重新启动就可以收到开机广播了。
 
-  **small注意：** 不要在onReceive()方法中添加过多的逻辑或者进行任何的耗时操作，因为在广播接收器中是不允许开启线程的，当onReceive方法运行较长时间而没有结束时，程序就会报错。所以广播接收器更多的是扮演一种打开程序其他组件的角色，比如创建一条状态栏通知，或者启动一个服务等。
+**small注意：** 不要在onReceive()方法中添加过多的逻辑或者进行任何的耗时操作，因为在广播接收器中是不允许开启线程的，当onReceive方法运行较长时间而没有结束时，程序就会报错。所以广播接收器更多的是扮演一种打开程序其他组件的角色，比如创建一条状态栏通知，或者启动一个服务等。
   
 ## 自定义广播
 
@@ -237,7 +237,7 @@ public class BootCompleteReceiver extends BroadcastReceiver {
 
 ## 本地广播
 
- 只在程序内部传播的广播，避免安全性问题,而且本地广播无法通过静态注册的方式接收。本地广播使用LocalBroadcastManager类来对广播进行管理，并提供了发送广播和注册广播接收器的方法：
+只在程序内部传播的广播，避免安全性问题,而且本地广播无法通过静态注册的方式接收。本地广播使用LocalBroadcastManager类来对广播进行管理，并提供了发送广播和注册广播接收器的方法：
  ```java
  package com.example.broadcasttest;
  import android.content.BroadcastReceiver;
