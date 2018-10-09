@@ -152,8 +152,8 @@ public class BootCompleteReceiver extends BroadcastReceiver {
 ## 自定义广播
 
   **标准广播**
+-  定义一个广播接收器，新建一个MyBroadcastReceiver，代码如下： 
   
-  -  定义一个广播接收器，新建一个MyBroadcastReceiver，代码如下：  
 ```java
   public class MyBroadcastReceiver extends BroadcastReceiver {
 
@@ -163,9 +163,9 @@ public class BootCompleteReceiver extends BroadcastReceiver {
         show();
     }
   }
- ```
-  -  以上是通过快捷方式创建的广播接收器，所以配置文件里面已经有了receiver标签，修改标签内容，即添加过滤者，代码：  
-  
+```
+-  以上是通过快捷方式创建的广播接收器，所以配置文件里面已经有了receiver标签，修改标签内容，即添加过滤者，代码：  
+
 ```xml
   <receiver
     android:name=".MyBroadcastReceiver"
@@ -177,7 +177,7 @@ public class BootCompleteReceiver extends BroadcastReceiver {
     </intent-filter>
  </receiver>
 ```
- 这里让MyBroadcastReceiver接收一条值为com.beidou.broadcasttest.MY_BROADCAST的广播，因此待会在发送广播的时候，我们需要发出这样的一条广播。
+这里让MyBroadcastReceiver接收一条值为com.beidou.broadcasttest.MY_BROADCAST的广播，因此待会在发送广播的时候，我们需要发出这样的一条广播。
   -  修改activity_main.xml以及MainActivity中的代码：
   
   ```java
@@ -198,7 +198,6 @@ public class BootCompleteReceiver extends BroadcastReceiver {
     android:layout_height="wrap_content"
     android:text="send broadcast!" />
   ```
-
   总结：
   1. 首先构建出了一个Intent对象，并把要发送的广播的值传入。 
   2. 然后调用了Context的sendBroadcast方法将广播发送出去，这样所有监听com.beidou.broadcasttest.MY_BROADCAST这条广播的广播接收器就会受到信息。 
