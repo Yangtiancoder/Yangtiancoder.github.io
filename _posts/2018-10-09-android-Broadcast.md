@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Android组件之BroadcastReceiver
+title: BroadcastReceiver类型和实现
 category: blog
 tags: [Android, Java]
 description: Android广播及代码实践。
