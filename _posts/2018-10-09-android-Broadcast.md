@@ -87,29 +87,30 @@ Android中的广播主要可以分为两种类型,标准广播和有序广播。
  }
 
  ```
- 以上代码便实现的是动态监听网络的变化，但是在android中会涉及到一些权限问题，因此涉及到网络权限的访问，我们需要在AndroidManifest.xml中生命如下
+以上代码便实现的是动态监听网络的变化，但是在android中会涉及到一些权限问题，因此涉及到网络权限的访问，我们需要在AndroidManifest.xml中生命如下
  ```xml
  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
  ```
- 动态注册的广播接收器虽然可以自由地控制注册和注销，但是必须在程序启动之后才能接收到广播，因为注册的逻辑是写在onCreate()方法中，如果想让程序在未启动的情况下就能接收到广播，就需要静态注册了。现在我们让程序接收一条开机广播，当收到这个条广播时就可以在onReceive（）方法里执行相应的逻辑，从而实现开机启动的功能。
+动态注册的广播接收器虽然可以自由地控制注册和注销，但是必须在程序启动之后才能接收到广播，因为注册的逻辑是写在onCreate()方法中，如果想让程序在未启动的情况下就能接收到广播，就需要静态注册了。现在我们让程序接收一条开机广播，当收到这个条广播时就可以在onReceive（）方法里执行相应的逻辑，从而实现开机启动的功能。
 
  **静态注册**
  
- 我们可以通过AS中的快捷操作来完成，右键项目New-Other-BroadcastReceiver，按操作创建一个BootCompleteReceiver
+我们可以通过AS中的快捷操作来完成，右键项目New-Other-BroadcastReceiver，按操作创建一个BootCompleteReceiver。  
 
- -  同样修改BootCompleteReceiver中的代码如下：
- ```java
-public class BootCompleteReceiver extends BroadcastReceiver {
+-  同样修改BootCompleteReceiver中的代码如下：  
+
+```java
+ public class BootCompleteReceiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
         Toast.makeText(context,"Boot Complete",Toast.LENGTH_LONG).show();
     }
-}
+ }
+```
+-  静态注册在AndroidManifest.xml中，我们会发现系统已经为我们做出了注册，我们修改如下：  
 
- ```
- -  静态注册在AndroidManifest.xml中，我们会发现系统已经为我们做出了注册，我们修改如下：
- ```xml
+```xml
   <?xml version="1.0" encoding="utf-8"?>
   <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.broadcasttest">
@@ -144,7 +145,7 @@ public class BootCompleteReceiver extends BroadcastReceiver {
         </receiver>
     </application>
   </manifest>
- ```  
+```  
 由于Android系统启动完成后会发出一条值为android.permission.RECEIVE_BOOT_COMPLETED的广播，因此我们 标签里添加了相应的action。  监听系统开机广播也是需要声明权限的，我们使用标签又加入一条android.permission.RECEIVE_BOOT_COMPLETED权限。将模拟器重新启动就可以收到开机广播了。
 
 **small注意：** 不要在onReceive()方法中添加过多的逻辑或者进行任何的耗时操作，因为在广播接收器中是不允许开启线程的，当onReceive方法运行较长时间而没有结束时，程序就会报错。所以广播接收器更多的是扮演一种打开程序其他组件的角色，比如创建一条状态栏通知，或者启动一个服务等。
