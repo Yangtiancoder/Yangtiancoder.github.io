@@ -29,6 +29,7 @@ description: 四种嵌套类介绍及其应用场景。
 -  局部内部类（Local inner class）
 
 **static嵌套类**
+
 因为static嵌套类不能直接访问所在类的非static成员变量和方法，所以static嵌套类必须通过绑定所在类的实例来进行访问。而对于所在类的静态成员和方法包括private、protected和public的，可以访问。因为它也有static修饰。
 
 static嵌套类通过写出封装的类名来进行实例化和访问其内部成员：
@@ -36,6 +37,7 @@ static嵌套类通过写出封装的类名来进行实例化和访问其内部�
 OuterClass.StaticNestedClass nestedObject = new OuterClass.StaticNestedClass();
 ```
 **成员内部类**
+
 因为内部类是所在类的成员，所以它可以访问所在类的任意变量和方法，但是它本身却不能定义任何static的变量或方法。
 
 同时，内部类的实例化方式也与static嵌套类有所不同：
@@ -44,7 +46,9 @@ OuterClass outerObject=new OuterClass();
 OuterClass.InnerClass innerObject = outerObject.new InnerClass();
 ```
 static嵌套类与non-static嵌套类，在形式上只有是否含有static关键字的区别，但是JVM在初始化时两者还是有差别的：差别就是后者在实例化时会自动地与外围实例建立一种联系，且这种联系不得修改。JVM在实例化non-static嵌套类时会生成一个指向外围实例的对象引用(this)，保存这种引用将会消耗时间和空间，同时，在外围实例满足垃圾回收的条件时仍然得以留存。
+
 **局部内部类**
+
 定义在方法内部的类叫作“局部内部类”。它的作用域仅限于方法作用域内，只能在方法的作用域内定义和实例化，是用处最小的类类型。和局部变量一样，它不能被修饰为private, public, protected和static的，并且只能访问方法内部定义的final变量。
 ```java
 class LocalInner
@@ -90,6 +94,7 @@ public class LocalInnerClassTest
 
 }
 ```
+
 **匿名内部类**
 
 顾名思义，匿名内部类就是没有名字的局部类。它不使用关键字class, extends, implements以及构造函数。
