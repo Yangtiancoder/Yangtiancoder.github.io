@@ -97,9 +97,7 @@ public class LocalInnerClassTest
 
 **匿名内部类**
 
-顾名思义，匿名内部类就是没有名字的局部类。它不使用关键字class, extends, implements以及构造函数。
-
-它通常作为方法的一个参数传入，比如在android开发中对一个Button添加一个OnClickListener监听器。
+顾名思义，匿名内部类就是没有名字的局部类。它不使用关键字class, extends, implements以及构造函数。它通常作为方法的一个参数传入，比如在android开发中对一个Button添加一个OnClickListener监听器。
 
 匿名内部类隐匿的继承了一个父类或者实现了一个接口。比如：
 ```java
