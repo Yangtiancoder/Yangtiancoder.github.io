@@ -15,11 +15,11 @@ description: AS导入遇到的问题。
 
 1.在build.gradle 中加入implementation 'com.android.support:appcompat-v7:27.0.1'
 
-![](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/assets/images/ANN2.png?raw=true)
+![](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/assets/images/AS-import.png?raw=true)
 
 2.利用Android Studo 导入包
 
-![](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/assets/images/ANN2.png?raw=true)
+![](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/assets/images/AS-import1.png?raw=true)
 
 
 **第二种情况**  
@@ -30,5 +30,6 @@ V7包我在SDK中已经下载了，新导入的项目不知道为什么无法解
 
 1.删除.idea文件，据说包含一些原来的配置信息等
 
-2.
-![](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/assets/images/ANN2.png?raw=true)
+2.Invalidate Caches/restart
+
+![](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/assets/images/AS-import2.png?raw=true)
