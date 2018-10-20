@@ -2,7 +2,7 @@
 layout: post
 title: 解决Cannot resolve symbol XXX
 category: blog
-tags: [Android，Java]
+tags: [Android, Java]
 description: AS导入遇到的问题。
 ---
 
