@@ -107,19 +107,23 @@ return null;
 
 其中CRUD操作跟前面一样，onCreate()在初始化内容提供器的时候调用。通常会在这里完成对数据库的创建和升级等操作，返回 true 表示内容提供器初始化成功，返回 false 则表示失败。getType()是根据传入的内容 URI 来返回相应的 MIME 类型。
 内容 URI 的格式主要有以下两种，以路径结尾就表示期望访问该表中所有的数据，以 id 结尾就表示期望访问该表中拥有相应 id 的数据
+
 ```java
 content://com.example.app.provider/table1
 content://com.example.app.provider/table1/1
 ```
+
 使用通配符的方式来分别匹配这两种格式的内容 URI，规则如下
 1. *：表示匹配任意长度的任意字符
 2. #：表示匹配任意长度的数字
+
 ```java
 \\一个能够匹配任意表的内容 URI 格式就可以写成：
 content://com.example.app.provider/*
 \\一个能够匹配 table1 表中任意一行数据的内容 URI 格式就可以写成：
 content://com.example.app.provider/table1/#
 ```
+
 接着借助 UriMatcher这个类就可以实现匹配内容 URI的功能。 UriMatcher中提供了一个 addURI()方法，这个方法接收三个参数，分别是权限、路径和一个自定义代码。这样，当调用 UriMatcher 的 match()方法时，就可以将一个 Uri 对象传入，返回值是某个能够匹配这个 Uri 对象所对应的自定义代码，利用这个代码，我们就可以判断出调用方期望访问的是哪张表中的数据了。
 
 **query()**
@@ -167,17 +171,19 @@ break;
 **getType()**
 
 它是所有的内容提供器都必须提供的一个方法，用于获取 Uri 对象所对应的 MIME 类型。一个内容 URI 所对应的 MIME字符串主要由三部分组分，格式如下：
-1. 必须以 vnd 开头。
-2. 如果内容 URI 以路径结尾，则后接 android.cursor.dir/，如果内容 URI 以 id 结尾，
-则后接 android.cursor.item/。
-3. 最后接上 vnd.<authority>.<path>。
-所以，对于 content://com.example.app.provider/table1 这个内容 URI，它所对应的 MIME
-类型就可以写成：
+
+ 1. 必须以 vnd 开头。
+ 2. 如果内容 URI 以路径结尾，则后接 android.cursor.dir/，如果内容 URI 以 id 结尾，
+    则后接 android.cursor.item/。
+ 3. 最后接上 vnd.<authority>.<path>。
+所以，对于 content://com.example.app.provider/table1 这个内容 URI，它所对应的 MIME类型就可以写成：
 vnd.android.cursor.dir/vnd.com.example.app.provider.table1
-对于 content://com.example.app.provider/table1/1 这个内容 URI，它所对应的 MIME 类型
-就可以写成：
+
+对于 content://com.example.app.provider/table1/1 这个内容 URI，它所对应的 MIME 类型就可以写成：
 vnd.android.cursor.item/vnd. com.example.app.provider.table1
+
 getType()示例代码如下：
+
 ```java
 public class MyProvider extends ContentProvider {
 ……
