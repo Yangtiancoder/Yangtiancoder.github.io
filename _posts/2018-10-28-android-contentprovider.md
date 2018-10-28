@@ -175,11 +175,14 @@ break;
  1. 必须以 vnd 开头。
  2. 如果内容 URI 以路径结尾，则后接 android.cursor.dir/，如果内容 URI 以 id 结尾，
     则后接 android.cursor.item/。
- 3. 最后接上 vnd.<authority>.<path>。
-所以，对于 content://com.example.app.provider/table1 这个内容 URI，它所对应的 MIME类型就可以写成：
+ 3. 最后接上 vnd.<authority>.<path>。  
+ 
+所以，对于content://com.example.app.provider/table1 
+这个内容 URI，它所对应的 MIME类型就可以写成：
 vnd.android.cursor.dir/vnd.com.example.app.provider.table1
 
-对于 content://com.example.app.provider/table1/1 这个内容 URI，它所对应的 MIME 类型就可以写成：
+对于 content://com.example.app.provider/table1/1 
+这个内容 URI，它所对应的 MIME 类型就可以写成：
 vnd.android.cursor.item/vnd. com.example.app.provider.table1
 
 getType()示例代码如下：
