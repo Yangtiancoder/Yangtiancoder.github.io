@@ -3,7 +3,7 @@ layout: post
 title: 继承填坑
 category: blog
 tags: [Java]
-description: 简单记录一下继承中需要注意的点。
+description: 重温javase,简单记录一下继承中需要注意的点。
 ---
 
 
