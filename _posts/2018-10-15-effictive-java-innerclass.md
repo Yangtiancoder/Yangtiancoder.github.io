@@ -47,6 +47,33 @@ OuterClass.InnerClass innerObject = outerObject.new InnerClass();
 ```
 static嵌套类与non-static嵌套类，在形式上只有是否含有static关键字的区别，但是JVM在初始化时两者还是有差别的：差别就是后者在实例化时会自动地与外围实例建立一种联系，且这种联系不得修改。JVM在实例化non-static嵌套类时会生成一个指向外围实例的对象引用(this)，保存这种引用将会消耗时间和空间，同时，在外围实例满足垃圾回收的条件时仍然得以留存。
 
+注意：当成员内部类拥有和外部类同名的成员变量或者方法时，会发生隐藏现象，即默认情况下访问的是成员内部类的成员。如果要访问外部类的同名成员，需要以下面的形式进行访问：
+```java
+外部类.this.成员变量
+外部类.this.成员方法
+```
+虽然成员内部类可以无条件地访问外部类的成员，而外部类想访问成员内部类的成员却不是这么随心所欲了。在外部类中如果要访问成员内部类的成员，必须先创建一个成员内部类的对象，再通过指向这个对象的引用来访问：
+```java
+class Circle {
+    private double radius = 0;
+ 
+    public Circle(double radius) {
+        this.radius = radius;
+        getDrawInstance().drawSahpe();   //必须先创建成员内部类的对象，再进行访问
+    }
+     
+    private Draw getDrawInstance() {
+        return new Draw();
+    }
+     
+    class Draw {     //内部类
+        public void drawSahpe() {
+            System.out.println(radius);  //外部类的private成员
+        }
+    }
+}
+```
+
 **局部内部类**
 
 定义在方法内部的类叫作“局部内部类”。它的作用域仅限于方法作用域内，只能在方法的作用域内定义和实例化，是用处最小的类类型。和局部变量一样，它不能被修饰为private, public, protected和static的，并且只能访问方法内部定义的final变量。
