@@ -76,7 +76,7 @@ class Circle {
 
 **局部内部类**
 
-定义在方法内部的类叫作“局部内部类”。它的作用域仅限于方法作用域内，只能在方法的作用域内定义和实例化，是用处最小的类类型。和局部变量一样，它不能被修饰为private, public, protected和static的，并且只能访问方法内部定义的final变量。
+定义在方法内部的类叫作“局部内部类”。它的作用域仅限于方法作用域内，只能在方法的作用域内定义和实例化，是用处最小的类类型。和局部变量一样，它不能被修饰为private, public, protected和static的。
 ```java
 class LocalInner
 {
