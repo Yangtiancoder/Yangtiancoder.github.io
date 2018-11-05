@@ -2,7 +2,7 @@
 layout: post
 title: 最小二乘法和梯度下降优化
 category: blog
-tags: [机器学习]
+tags: [Machine Learning]
 description: 专业课学习及网课笔记。
 ---
 
