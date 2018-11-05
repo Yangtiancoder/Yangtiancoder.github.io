@@ -2,7 +2,7 @@
 layout: post
 title: sklearn使用小结
 category: blog
-tags: [机器学习,聚类,毕设]
+tags: [Machine Learning,聚类,毕设]
 description: sklearn进行AP聚类算法。
 ---
 
