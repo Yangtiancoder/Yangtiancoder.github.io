@@ -2,7 +2,7 @@
 layout: post
 title: 机器学习笔记（一）之监督学习重要问题
 category: blog
-tags: [机器学习]
+tags: [Machine Learning]
 description: 机器学习笔记系列。
 ---
 
