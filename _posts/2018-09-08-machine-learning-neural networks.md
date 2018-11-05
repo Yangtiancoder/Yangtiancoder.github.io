@@ -2,7 +2,7 @@
 layout: post
 title: 人工神经网络
 category: blog
-tags: [ 机器学习, 深度学习]
+tags: [Machine Learning, Deep Learning]
 description: 基础概念和主要方法介绍。
 ---
 
