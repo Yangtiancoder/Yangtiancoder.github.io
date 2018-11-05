@@ -2,7 +2,7 @@
 layout: post
 title: 机器学习笔记（三）之朴素贝叶斯法
 category: blog
-tags: [机器学习]
+tags: [Machine Learning]
 description: 机器学习笔记系列。
 ---
 
