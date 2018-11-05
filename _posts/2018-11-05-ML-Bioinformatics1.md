@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Predictors of Radiation Pneumonitis in Patients
+title: Predictors of Radiation Pneumonitis
 category: blog
-tags: [机器学习, 论文, 生物信息学]
+tags: [机器学习, 论文, Bioinformatics]
 description: 对于接受调强放疗的霍奇金和非霍奇金淋巴瘤病人患有放射性肺炎的预测因子。
 ---
 
