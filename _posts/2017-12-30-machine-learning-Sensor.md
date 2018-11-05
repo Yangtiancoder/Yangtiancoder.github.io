@@ -2,7 +2,7 @@
 layout: post
 title: 机器学习笔记（二）之感知机
 category: blog
-tags: [机器学习]
+tags: [Machine Learning]
 description: 机器学习笔记系列。
 ---
 
