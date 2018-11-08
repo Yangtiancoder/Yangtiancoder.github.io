@@ -42,7 +42,7 @@ Koh等人发现在2003-2005间的64位病人患有霍奇金淋巴癌具有较低
 
 -  测量时，总的肺容量不排除GTV,CTV和PTV。
 
-![](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/assets/images/QQ%E6%88%AA%E5%9B%BE20181105194012.png?raw=true)
+![](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/assets/images/2015-RP-ICPU.png?raw=true)
 
 -  证明有说服力，排除其他因素。
 
