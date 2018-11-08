@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Predictors of Radiation Pneumonitis
+title: Predictors of Radiation Pneumonitis（翻译）
 category: blog
 tags: [Machine Learning, 论文, Bioinformatics]
 description: 对于接受调强放疗的霍奇金和非霍奇金淋巴瘤病人患有放射性肺炎的预测因子。
@@ -42,6 +42,8 @@ Koh等人发现在2003-2005间的64位病人患有霍奇金淋巴癌具有较低
 
 -  测量时，总的肺容量不排除GTV,CTV和PTV。
 
+![](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/assets/images/QQ%E6%88%AA%E5%9B%BE20181105194012.png?raw=true)
+
 -  证明有说服力，排除其他因素。
 
 ## Statistical analysis
@@ -56,5 +58,27 @@ Koh等人发现在2003-2005间的64位病人患有霍奇金淋巴癌具有较低
 
 对于21例发生RP的患者，中位MLD为12.9 Gy（范围：8.2-16.3 Gy），而未发生RP的患者为10.3Gy（范围：3.8-16.0 Gy）。 RP患者（范围：38％-66％）的相应V5为58％，而未患RP的患者为49％（范围：23％-64％）。 分析的其他剂量测定参数列于表4中。
 
+![](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/assets/images/2015-RP-table4.png?raw=true)
 
+表5中列出了潜在预测RP的剂量和临床因素。对于所有检测的剂量学参数（V25，V20，V15，V10，V5和MLD），生成ROC以确定剂量学参数最佳界限值。
 
+发现预测的唯一临床因素RP的发展是复发或难治性的病史疾病，为其进行移植或抢救化疗（或两者兼而有之）。在接受移植的患者中，在移植前或移植后接受RT的患者的RP率之间没有显着差异（PZ.501）（表5）。
+
+![](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/assets/images/2015-RP-table5.png?raw=true)
+
+在逻辑回归中，剂量测定剂量 - 体积和MLD参数仍然显着（表6）。 挽救化疗史（优势比[OR] Z 3.00,95％可信区间[CI]：1.16-7.75，PZ.023）和移植（OR Z 2.71,95％CI：1.04-7.07，PZ.042）保持独立单变量分析中RP的预测因子。
+
+![](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/assets/images/2015-RP-table6.png?raw=true)
+
+在多变量模型中测量每一个可能的剂量学阈值，从V5到V25的每个截止值都是显着的。 然而，似然比c2值为
+该模型的最大值包括V5剂量因子，其中V5> 55％（似然比c2 Z 19.37），突出显示该剂量学参数的强度，用于预测肺炎风险的变化（表E1;在线提供的MLD也很强 相反，最低似然比c2值是V20> 30％（似然比c2 Z 8.33）。
+
+## Discussion
+
+这种肺损伤机制在使用三维适形RT计划治疗的患者中不明显，因为接受5Gy的肺体积通常不大于接受20Gy的体积。因此与3D适形放疗相比，IMRT中应考虑不同的剂量测定参数。
+
+因为几乎所有接受补救性化疗的患者都接受了自体或同种异体干细胞移植，所以在本实验中我们无法评估，单独的补救性化疗可以独立的增加相对于移植的风险。除此之外，在目前的研究中，使用的肺容量并未排除任何靶体积，如果使用本报告中确定的阈值，则应考虑这一点。
+
+## Conclusions
+
+总之，MLD和低剂量参数如V5，V10和V15是用IMRT治疗淋巴瘤患者RP发展的重要预测因子。 接受挽救性化疗并接受造血干细胞移植的复发或难治性疾病患者RP的风险特别高。 无论如何，当使用IMRT治疗霍奇金或非霍奇金淋巴瘤的总肺中> 55％接受5Gy时，RP的风险接近35％。
