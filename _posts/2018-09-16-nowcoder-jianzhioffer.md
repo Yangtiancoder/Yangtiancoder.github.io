@@ -169,3 +169,88 @@ public class Solution {
   
 注意：
 先对相等进行判断，即使头节点相等其余不等之后还能继续向下判断，判断是否含有就是需要至少把前面的树遍历一遍，即使不想等，也需要继续向下判断。
+
+**输入一个整数，输出该数二进制表示中1的个数。其中负数用补码表示。**
+
+```java
+ public class Solution {
+    public int NumberOf1(int n) {
+        int count=0;
+       while(n!=0){
+           n=n&(n-1);
+           count++;
+       }
+        return count;
+    }
+ }
+```
+
+说明：
+
+如果一个整数不为0，那么这个整数至少有一位是1。如果我们把这个整数减1，那么原来处在整数最右边的1就会变为0，原来在1后面的所有的0都会变成1(如果最右边的1后面还有0的话)。其余所有位将不会受到影响。  
+
+举个例子：一个二进制数1100，从右边数起第三位是处于最右边的一个1。减去1后，第三位变成0，它后面的两位0变成了1，而前面的1保持不变，因此得到的结果是1011.我们发现减1的结果是把最右边的一个1开始的所有位都取反了。这个时候如果我们再把原来的整数和减去1之后的结果做与运算，从原来整数最右边一个1那一位开始所有位都会变成0。如1100&1011=1000.也就是说，把一个整数减去1，再和原整数做与运算，会把该整数最右边一个1变成0.那么一个整数的二进制有多少个1，就可以进行多少次这样的操作。
+
+**输入一个矩阵，按照从外向里以顺时针的顺序依次打印出每一个数字，例如，如果输入如下4 X 4矩阵： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 则依次打印出数字1,2,3,4,8,12,16,15,14,13,9,5,6,7,11,10.**
+
+```java
+import java.util.ArrayList;
+public class Solution {
+    public ArrayList<Integer> printMatrix(int [][] array) {
+        ArrayList<Integer> result = new ArrayList<Integer> ();
+        if(array.length==0) return result;
+        int n = array.length,m = array[0].length;
+        if(m==0) return result;
+        int layers = (Math.min(n,m)+1)/2;//这个是层数
+        for(int i=0;i<layers;i++){
+            for(int k = i;k<m-i;k++) result.add(array[i][k]);//左至右
+            for(int j=i+1;j<n-i;j++) result.add(array[j][m-i-1]);//右上至右下
+            for(int k=m-i-2;(k>=i)&&(n-i-1!=i);k--) result.add(array[n-i-1][k]);//右至左
+            for(int j=n-i-2;(j>i)&&(m-i-1!=i);j--) result.add(array[j][i]);//左下至左上
+        }
+        return result;       
+    }
+}
+
+```
+解题思路：顺时针打印就是按圈数循环打印，一圈包含两行或者两列，在打印的时候会出现某一圈中只包含一行，要判断从左向右打印和从右向左打印的时候是否会出现重复打印，同样只包含一列时，要判断从上向下打印和从下向上打印的时候是否会出现重复打印的情况
+
+
+**把一个数组最开始的若干个元素搬到数组的末尾，我们称之为数组的旋转。 输入一个非减排序的数组的一个旋转，输出旋转数组的最小元素。 例如数组{3,4,5,1,2}为{1,2,3,4,5}的一个旋转，该数组的最小值为1。 NOTE：给出的所有元素都大于0，若数组大小为0，请返回0。**
+
+```java
+ public class Solution {
+    public int minNumberInRotateArray(int [] array) {
+        int low = 0 ; int high = array.length - 1;   
+        while(low < high){
+            int mid = low + (high - low) / 2;        
+            if(array[mid] > array[high]){
+                low = mid + 1;
+            }else if(array[mid] == array[high]){
+                high = high - 1;
+            }else{
+                high = mid;
+            }   
+        }
+        return array[low];
+    }
+  }
+```
+
+说明：
+
+
+采用二分法解答这个问题，  
+mid = low + (high - low)/2
+需要考虑三种情况：  
+(1)array[mid] > array[high]:  
+出现这种情况的array类似[3,4,5,6,0,1,2]，此时最小数字一定在mid的右边。  
+low = mid + 1  
+(2)array[mid] == array[high]:  
+出现这种情况的array类似 [1,0,1,1,1] 或者[1,1,1,0,1]，此时最小数字不好判断在mid左边  
+还是右边,这时只好一个一个试 ，  
+high = high - 1  
+(3)array[mid] < array[high]:  
+出现这种情况的array类似[2,2,3,4,5,6,6],此时最小数字一定就是array[mid]或者在mid的左  
+边。因为右边必然都是递增的。  
+high = mid  
