@@ -2,7 +2,7 @@
 layout: post
 title: java的嵌套类
 category: blog
-tags: [java]
+tags: [Java]
 description: 四种嵌套类介绍及其应用场景。
 ---
 
