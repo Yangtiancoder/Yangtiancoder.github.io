@@ -2,7 +2,7 @@
 layout: post
 title: 创建对象的那些事
 category: blog
-tags: [java]
+tags: [Java]
 description: 谈谈静态工厂方法。
 ---
 
