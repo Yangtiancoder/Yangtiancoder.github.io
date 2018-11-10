@@ -10,7 +10,7 @@ description: I/O多路复用。
 
 ## select的调用过程如下所示：  
 
-![]()
+![](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/assets/images/java-io-selectepoll1.png?raw=true)
 
 （1）使用copy_from_user从用户空间拷贝fd_set到内核空间  
 
