@@ -10,6 +10,8 @@ description: I/O多路复用。
 
 ## select的调用过程如下所示：  
 
+![]()
+
 （1）使用copy_from_user从用户空间拷贝fd_set到内核空间  
 
 （2）注册回调函数__pollwait  
