@@ -30,23 +30,23 @@ Cox模型适用于处理单因素或多因素影响下的时间-反应数据，�
 
 说明：
 
-            TP：预测的结果跟实际结果一致，都点击了广告。  
+   TP：预测的结果跟实际结果一致，都点击了广告。  
 
-            FP：预测结果点击了，但是真实情况是未点击。  
+   FP：预测结果点击了，但是真实情况是未点击。  
 
-            FN：预测结果没有点击，但是真实情况是点击了。  
+   FN：预测结果没有点击，但是真实情况是点击了。  
 
-            TN：预测结果没有点击，真实情况也是没有点击。  
+   TN：预测结果没有点击，真实情况也是没有点击。  
 
 -  2.两个公式：  
 
     1）真正率：  
 
-         TPR=TP/(TP+FN)  
+    TPR=TP/(TP+FN)  
 
     2）假正率
 
-         FPR=FP/(FP+TN)  
+     FPR=FP/(FP+TN)  
 
 -  3.ROC曲线就是真正率随假正率的变化情况。下面用一段代码展示一下(sklearn包中包含相关算法)：  
 ```python
@@ -107,11 +107,13 @@ plt.show()
 举例一：以下为一个典型的四格卡方检验，我们想知道喝牛奶对感冒发病率有没有影响：
 
 ![](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/assets/images/kafang-1.png?raw=true)
+
 通过简单的统计我们得出喝牛奶组和不喝牛奶组的感冒率为30.94%和25.00%，两者的差别可能是抽样误差导致，也有可能是牛奶对感冒率真的有影响。
 
 为了确定真实原因，我们先假设喝牛奶对感冒发病率是没有影响的，即喝牛奶喝感冒时独立无关的，所以我们可以得出感冒的发病率实际是（43+28）/（43+28+96+84）= 28.29%
 
 所以，理论的四格表应该如下表所示：
+
 ![](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/assets/images/kafang-2.png?raw=true)
 
 即下表：
@@ -147,8 +149,8 @@ x2用于衡量实际值与理论值的差异程度（也就是卡方检验的核
 显然1.077<3.84，没有达到卡方分布的临界值，所以喝牛奶和感冒独立不相关的假设不成立。
 
 -  卡方分布表
-![](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/assets/images/kafang-5.png?raw=true) 
 
+![](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/assets/images/kafang-5.png?raw=true) 
 
 **参考资料**
 
