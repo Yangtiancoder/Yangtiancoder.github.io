@@ -3,7 +3,7 @@ layout: post
 title: 卡方检验、COX和ROC等
 category: blog
 tags: [Machine Learning]
-description: 最近遇到的ML概念。
+description: 最近遇到的ML概念记录。
 ---
 
 # 对数秩和检验
