@@ -48,12 +48,12 @@ Cox模型适用于处理单因素或多因素影响下的时间-反应数据，�
 
      FPR=FP/(FP+TN)  
 -  3.ROC曲线就是真正率随假正率的变化情况。下面用一段代码展示一下(sklearn包中包含相关算法)：  
+
 ```python
 ##导入相关包
 import numpy as np
 from sklearn import metrics
 import matplotlib.pyplot as plt
-
 ##设置y值：表示实际值
 y = np.array([1, 1, 2, 2])
 ##设置pred值：表示预测后的值
@@ -73,6 +73,7 @@ plt.ylabel('True Positive Rate')
 plt.legend(loc="lower right")
 plt.show()
 ```
+
 结果如图所示：
 
 ![](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/assets/images/ROC-2.png?raw=true)
