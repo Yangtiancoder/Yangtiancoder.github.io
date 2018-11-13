@@ -75,7 +75,7 @@ plt.show()
 ```
 结果如图所示：
 
-![](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/assets/images/ROC-1.png?raw=true)
+![](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/assets/images/ROC-2.png?raw=true)
 
 -  4.关于ROC曲线
 
