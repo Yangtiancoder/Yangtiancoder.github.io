@@ -26,7 +26,7 @@ description: 随便写写。
 这一周是有点丧的，就是莫名的什么也不想干。不过我觉得这件小事也给我充了一下电，反正就是蛮开心的，嘻嘻。 
 
 神图预警：
-![](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/assets/images/xiaoxue-4.png?raw=true)  
+![](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/assets/images/xiaoxue-2.png?raw=true)  
 
 我发现了这张照片，第一次见到，原来小学还有合影呢，看到好多熟悉的样子，找到了我自己，小时候帅的一批，开心。  
 
