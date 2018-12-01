@@ -59,11 +59,19 @@ MapReduce在hadoop2.x作业执行的流程图
 
 两个框架最大的区别在于原来框架中的JobTracker和TaskTracker不见了，取而代之的是ResourceManager、NodeManager和Application Master三个。重构根本的思想是将 JobTracker 两个主要的功能分离成单独的组件，这两个功能是资源管理和任务调度 / 监控。Resource Manager负责全局资源分配，Application Master每个节点一个，负责当前节点的调度和协调。Node Manager是每台机器的代理，监控应用程序的资源使用情况，并汇报给Resource Manager。因此与老的MapReduce相比，YARN把资源管理与任务调度的工作分离开来，减少了MapReduce中Job Tracker的压力。
 
-ResourceManager起到了JobTracker的资源分配的作用，它做的关于作业调度的就只有启动、监控每个作业所属的ApplicationMaster，并重启故障的ApplicationMaster。ResourceManager（RM）包含两个主要的组件：定时调用器(Scheduler)以及应用管理器(ApplicationsManager)   
-调度器（Scheduler）：根据容量，队列等限制条件，将系统中的资源分配给各个正在运行的应用。这里的调度器是一个“纯调度器”，因为它不再负责监控或者跟踪应用的执行状态等，此外，他也不负责重新启动因应用执行失败或者硬件故障而产生的失败任务。调度器仅根据各个应用的资源需求进行调度，这是通过抽象概念“资源容器”完成的，资源容器（Resource Container）将内存，CPU，磁盘，网络等资源封装在一起，从而限定每个任务使用的资源量。总而言之，定时调度器负责向应用程序分配资源，它不做监控以及应用程序的状态跟踪，并且它不保证会重启由于应用程序本身或硬件出错而执行失败的应用程序。     
-NodeManager 功能比较专一，就是负责 Container 状态的维护，并向 RM 保持心跳。     
-ApplicationMaster：每个应用程序的ApplicationMaster负责从Scheduler申请资源，以及跟踪这些资源的使用情况以及任务进度的监控。    
-Container：是YARN中资源的抽象，它将内存、CPU、磁盘、网络等资源封装在一起。当AM向RM申请资源时，RM为AM返回的资源便是用Container表示的。
+基本思想就是将JobTracker两个主要的功能分分离成单独的组件，这两个功能是资源管理和任务调度/监控。新的资源管理器全局管理所有应用程序计算资源的分配。每一个应用的ApplicationMaster负责相应的调度和协调。一个应用程序无非是一个单独的传统的MapReduce任务或者是一个DAG(有向无环图)任务。ResourceManager和每一台机器的阶段管理服务器能够管理用户在哪台机器上的进程并能对计算进行组织。  
+
+事实上，每一个应用的ApplicationMaster是一个详细的框架库，它结合从ResourceManager获得的资源和NedoManager协同工作运行和监控任务。
+
+ResourceManager支持分层级的应用队列，这些队列享有集群一定比例的资源。从某种意义上讲他就是一个纯粹的调度器，它在执行过程中不对应用进行监控和状态跟踪。同样，它也不能重启因应用失败或者硬件错误而运行失败的任务。
+
+ResourceManager是基于应用程序对资源的需求进行调度的；每一个应用程序需要不同类型的资源因此就需要不同的容器。资源包括：内存、CPU、磁盘、网络等。可以看出，这同现在MapReduce固定类型的资源使用模式有显著区别，它给集群的使用带来负面的影响，资源管理器提供一个调度策略的插件，它负责将集群资源分配给多个队列和应用程序，调度插件可以基于现有的能力调度和公平调度模型。
+
+图中NodeManager是每一台机器框架的代理，是执行应用程序的容器，监控应用程序的资源使用情况（CPU 内存 磁盘 网络）并且向调度器汇报。
+
+每一个应用的ApplicationMaster的职责有：向调度器索要适当的资源容器，运行任务，跟踪应用程序的状态和监控他们的进程，处理任务的失败原因。
+
+ResourceManager是一个中心的服务，它做的事情是调度、启动每一个Job所属的ApplicationMaster、另外监控ApplicationMaster的存在情况。Job里面所在的task的监控，重启等内容不见了，这就是ApplicationMaster存在的原因。ResourceManager负责作业与资源的调度，接收JobSubmitter提交的作业，按照作业的上下文(context)信息，以及从NodeManager收集来的状态信息，启动调度过程，分配一个Container作为Application Master.
 
 ### Hadoop2.x中的MapReduce优点
 
