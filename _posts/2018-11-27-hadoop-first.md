@@ -59,9 +59,9 @@ MapReduce在hadoop2.x作业执行的流程图
 
 两个框架最大的区别在于原来框架中的JobTracker和TaskTracker不见了，取而代之的是ResourceManager、NodeManager和Application Master三个。重构根本的思想是将 JobTracker 两个主要的功能分离成单独的组件，这两个功能是资源管理和任务调度 / 监控。Resource Manager负责全局资源分配，Application Master每个节点一个，负责当前节点的调度和协调。Node Manager是每台机器的代理，监控应用程序的资源使用情况，并汇报给Resource Manager。因此与老的MapReduce相比，YARN把资源管理与任务调度的工作分离开来，减少了MapReduce中Job Tracker的压力。
 
-（1）ResourceManager起到了JobTracker的资源分配的作用，它做的关于作业调度的就只有启动、监控每个作业所属的ApplicationMaster，并重启故障的ApplicationMaster。不再负责原来框架中JobTracker的监控、重启每个Task。使得单点故障的影响变得小，恢复更加容易。NodeManager 功能比较专一，就是负责 Container 状态的维护，并向 RM 保持心跳。Application Master 负责一个 Job 生命周期内的所有工作，类似老的框架中 JobTracker。但注意每一个 Job(不是每一种)都有一个 Application Master，它可以运行在 ResourceManager 以外的机器上。     
-（2）新框架将JobTracker的分 离，减少了它的资源消耗，使系统更容易从单点故障中恢复，并且监测每个作业子任务状态的程序分布式化了，更安全。   
-（3）在新框架中，Application Master是可变的，可以为不同的计算框架编写自己的Application Master，使得更多的计算框架可以运行在Hadoop集群上。   
+（1）ResourceManager起到了JobTracker的资源分配的作用，它做的关于作业调度的就只有启动、监控每个作业所属的ApplicationMaster，并重启故障的ApplicationMaster。不再负责原来框架中JobTracker的监控、重启每个Task。使得单点故障的影响变得小，恢复更加容易。NodeManager 功能比较专一，就是负责 Container 状态的维护，并向 RM 保持心跳。Application Master 负责一个 Job 生命周期内的所有工作，类似老的框架中 JobTracker。  
+（2）新框架将JobTracker的分离，减少了它的资源消耗，使系统更容易从单点故障中恢复，并且监测每个作业子任务状态的程序分布式化了，更安全。   
+（3）在新框架中，ApplicationMaster是可变的，可以为不同的计算框架编写自己的Application Master，使得更多的计算框架可以运行在Hadoop集群上。   
 （4）老的框架中，JobTracker一个很大的负担就是监控job下的tasks的运行状况，现在，这个部分就扔给ApplicationMaster做了，而ResourceManager中有一个模块叫ApplicationsManager，它是监测ApplicationMaster的运行状况，如果出问题，会将其在其他机器上重启。   
 （5）Container很好地起到了资源隔离的作用，让资源更好地被利用起来。  
 
