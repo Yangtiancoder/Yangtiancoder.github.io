@@ -61,9 +61,9 @@ MapReduce在hadoop2.x作业执行的流程图
 
 ResourceManager起到了JobTracker的资源分配的作用，它做的关于作业调度的就只有启动、监控每个作业所属的ApplicationMaster，并重启故障的ApplicationMaster。ResourceManager（RM）包含两个主要的组件：定时调用器(Scheduler)以及应用管理器(ApplicationManager)   
 调度器（Scheduler）：根据容量，队列等限制条件，将系统中的资源分配给各个正在运行的应用。这里的调度器是一个“纯调度器”，因为它不再负责监控或者跟踪应用的执行状态等，此外，他也不负责重新启动因应用执行失败或者硬件故障而产生的失败任务。调度器仅根据各个应用的资源需求进行调度，这是通过抽象概念“资源容器”完成的，资源容器（Resource Container）将内存，CPU，磁盘，网络等资源封装在一起，从而限定每个任务使用的资源量。总而言之，定时调度器负责向应用程序分配资源，它不做监控以及应用程序的状态跟踪，并且它不保证会重启由于应用程序本身或硬件出错而执行失败的应用程序。   
-应用管理器（ApplicationsManager，ASM）：ASM主要负责接收作业，协商获取第一个容器用于执行AM和提供重启失败AM container的服务。
-。NM是每个节点上的框架代理，主要负责启动应用所需的容器，监控资源（内存，CPU，磁盘，网络等）的使用情况并将之汇报给调度器（Scheduler）。   
-ApplicationMaster：每个应用程序的ApplicationMaster负责从Scheduler申请资源，以及跟踪这些资源的使用情况以及任务进度的监控。  
+应用管理器（ApplicationsManager，ASM）：ASM主要负责接收作业，协商获取第一个容器用于执行AM和提供重启失败AM container的服务。  
+NM是每个节点上的框架代理，主要负责启动应用所需的容器，监控资源（内存，CPU，磁盘，网络等）的使用情况并将之汇报给调度器（Scheduler）。     
+ApplicationMaster：每个应用程序的ApplicationMaster负责从Scheduler申请资源，以及跟踪这些资源的使用情况以及任务进度的监控。    
 Container：是YARN中资源的抽象，它将内存、CPU、磁盘、网络等资源封装在一起。当AM向RM申请资源时，RM为AM返回的资源便是用Container表示的。
 
 ### Hadoop2.x中的MapReduce优点
