@@ -35,7 +35,7 @@ layout: page
   <h3>来勾搭我</h3>
 
 * <i class="fa fa-weibo"></i><a href="https://weibo.com/u/5393123005?refer_flag=1001030201_&is_hot=1" target="_blank" title="我的weibo">我的微博</a>
-* <i class="fa fa-qq"></i><a href="https://blog.csdn.net/yuih344" target="_blank" title="我的CSDN"> 我的CSDN</a>
+  * <i class="fa fa-qq" aria-hidden="true"></i><a href="http://wpa.qq.com/msgrd?v=3&uin=1486303708&site=qq&menu=yes" target="_blank" title="QQ在线"> 我的QQ</a>
 * <i class="fa fa-github"></i><a href="https://github.com/Yangtiancoder" target="_blank" title="Yangtian的github">我的GitHub</a>
 * <i class="fa fa-search"></i><a href="https://www.zhihu.com/people/tian-yang-48-83/activities" target="_blank" title="我的知乎"> 我的知乎</a>
 
