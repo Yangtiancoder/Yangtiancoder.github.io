@@ -40,12 +40,12 @@ MapReduce在hadoop1.x作业执行的流程图
 
 其中，
 -  JobTracker: 主要负责资源监控管理和作业调度 
-（a）监控所有TaskTracker 与job的健康状况,一旦发现失败,就将相应的任务转移到其他节点； 
-（b）同时JobTracker会跟踪任务的执行进度、资源使用量等信息,并将这些信息告诉任务调度器,而调度器会在资源出现空闲时,选择合适的任务使用这些资源。
+（1）监控所有TaskTracker 与job的健康状况,一旦发现失败,就将相应的任务转移到其他节点； 
+（2）同时JobTracker会跟踪任务的执行进度、资源使用量等信息,并将这些信息告诉任务调度器,而调度器会在资源出现空闲时,选择合适的任务使用这些资源。
 -  TaskTracker：是JobTracker与Task之前的桥梁 
-（a）从JobTracker接收并执行各种命令:运行任务、提交任务、Kill任务、重新初始化任务; 
-（b）周期性地通过心跳机制,将节点健康情况和资源使用情况、各个任务的进度和状态等汇报给JobTracker。
-
+（1）首先用户程序 （JobClient） 提交了一个 job，job 的信息会发送到 Job Tracker 中，Job Tracker 是 Map-reduce 框架的中心，他需要与集群中的机器定时通信 (heartbeat), 需要管理哪些程序应该跑在哪些机器上，需要管理所有 job 失败、重启等操作。  
+（2）TaskTracker 是 Map-reduce 集群中每台机器都有的一个部分，他做的事情主要是监视自己所在机器的资源情况。  
+（3）TaskTracker 同时监视当前机器的 tasks 运行状况。TaskTracker 需要把这些信息通过 heartbeat发送给JobTracker，JobTracker 会搜集这些信息以给新提交的 job 分配运行在哪些机器上。  
 
 ### Hadoop1.x的MapReduce框架的主要局限： 
 （1）JobTracker 是 Map-reduce 的集中处理点，存在单点故障，可靠性差；   
