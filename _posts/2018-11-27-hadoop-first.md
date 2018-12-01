@@ -59,10 +59,18 @@ MapReduce在hadoop2.x作业执行的流程图
 
 两个框架最大的区别在于原来框架中的JobTracker和TaskTracker不见了，取而代之的是ResourceManager、NodeManager和Application Master三个。重构根本的思想是将 JobTracker 两个主要的功能分离成单独的组件，这两个功能是资源管理和任务调度 / 监控。Resource Manager负责全局资源分配，Application Master每个节点一个，负责当前节点的调度和协调。Node Manager是每台机器的代理，监控应用程序的资源使用情况，并汇报给Resource Manager。因此与老的MapReduce相比，YARN把资源管理与任务调度的工作分离开来，减少了MapReduce中Job Tracker的压力。
 
-（1）ResourceManager起到了JobTracker的资源分配的作用，它做的关于作业调度的就只有启动、监控每个作业所属的ApplicationMaster，并重启故障的ApplicationMaster。不再负责原来框架中JobTracker的监控、重启每个Task。使得单点故障的影响变得小，恢复更加容易。NodeManager 功能比较专一，就是负责 Container 状态的维护，并向 RM 保持心跳。Application Master 负责一个 Job 生命周期内的所有工作，类似老的框架中 JobTracker。  
-（2）新框架将JobTracker的分离，减少了它的资源消耗，使系统更容易从单点故障中恢复，并且监测每个作业子任务状态的程序分布式化了，更安全。   
-（3）在新框架中，ApplicationMaster是可变的，可以为不同的计算框架编写自己的Application Master，使得更多的计算框架可以运行在Hadoop集群上。   
-（4）老的框架中，JobTracker一个很大的负担就是监控job下的tasks的运行状况，现在，这个部分就扔给ApplicationMaster做了，而ResourceManager中有一个模块叫ApplicationsManager，它是监测ApplicationMaster的运行状况，如果出问题，会将其在其他机器上重启。   
-（5）Container很好地起到了资源隔离的作用，让资源更好地被利用起来。  
+ResourceManager起到了JobTracker的资源分配的作用，它做的关于作业调度的就只有启动、监控每个作业所属的ApplicationMaster，并重启故障的ApplicationMaster。ResourceManager（RM）包含两个主要的组件：定时调用器(Scheduler)以及应用管理器(ApplicationManager)   
+调度器（Scheduler）：根据容量，队列等限制条件，将系统中的资源分配给各个正在运行的应用。这里的调度器是一个“纯调度器”，因为它不再负责监控或者跟踪应用的执行状态等，此外，他也不负责重新启动因应用执行失败或者硬件故障而产生的失败任务。调度器仅根据各个应用的资源需求进行调度，这是通过抽象概念“资源容器”完成的，资源容器（Resource Container）将内存，CPU，磁盘，网络等资源封装在一起，从而限定每个任务使用的资源量。总而言之，定时调度器负责向应用程序分配资源，它不做监控以及应用程序的状态跟踪，并且它不保证会重启由于应用程序本身或硬件出错而执行失败的应用程序。   
+应用管理器（ApplicationsManager，ASM）：ASM主要负责接收作业，协商获取第一个容器用于执行AM和提供重启失败AM container的服务。
+。NM是每个节点上的框架代理，主要负责启动应用所需的容器，监控资源（内存，CPU，磁盘，网络等）的使用情况并将之汇报给调度器（Scheduler）。   
+ApplicationMaster：每个应用程序的ApplicationMaster负责从Scheduler申请资源，以及跟踪这些资源的使用情况以及任务进度的监控。  
+Container：是YARN中资源的抽象，它将内存、CPU、磁盘、网络等资源封装在一起。当AM向RM申请资源时，RM为AM返回的资源便是用Container表示的。
+
+### Hadoop2.x中的MapReduce优点
+
+（1）新框架将JobTracker的分离，减少了它的资源消耗，使系统更容易从单点故障中恢复，并且监测每个作业子任务状态的程序分布式化了，更安全。   
+（2）在新框架中，ApplicationMaster是可变的，可以为不同的计算框架编写自己的Application Master，使得更多的计算框架可以运行在Hadoop集群上。   
+（3）老的框架中，JobTracker一个很大的负担就是监控job下的tasks的运行状况，现在，这个部分就扔给ApplicationMaster做了，而ResourceManager中有一个模块叫ApplicationsManager，它是监测ApplicationMaster的运行状况，如果出问题，会将其在其他机器上重启。   
+（4）Container很好地起到了资源隔离的作用，让资源更好地被利用起来。  
 
 
