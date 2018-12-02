@@ -99,7 +99,7 @@ HDFS的文件读取原理，主要包括以下几个步骤：
 
 （4）DFSInputStream连接距离最近的datanode，通过反复调用read方法，将数据从datanode传输到客户端。  
 
-（5） 到达块的末端时，DFSInputStream关闭与该datanode的连接，寻找下一个块的最佳datanode。  
+（5）到达块的末端时，DFSInputStream关闭与该datanode的连接，寻找下一个块的最佳datanode。  
 
 （6）客户端完成读取，对FSDataInputStream调用close()方法关闭连接。  
 
@@ -109,9 +109,9 @@ HDFS的文件写入原理，主要包括以下几个步骤：
 如图：
 ![HDFS-3.png](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/assets/images/HDFS-3.png?raw=true)
 
-（1） 客户端通过对DistributedFileSystem对象调用create()函数来新建文件。  
+（1）客户端通过对DistributedFileSystem对象调用create()函数来新建文件。  
 
-（2） 分布式文件系统对namenod创建一个RPC调用，在文件系统的命名空间中新建一个文件。  
+（2）分布式文件系统对namenod创建一个RPC调用，在文件系统的命名空间中新建一个文件。  
 
 （3）Namenode对新建文件进行检查无误后，分布式文件系统返回给客户端一个FSDataOutputStream对象，FSDataOutputStream对象封装一个DFSoutPutstream对象，负责处理namenode和datanode之间的通信，客户端开始写入数据。  
 
