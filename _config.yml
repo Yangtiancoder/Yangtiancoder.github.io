@@ -383,8 +383,8 @@ highlight_theme: normal
 
 # MathJax Support
 mathjax:
-  enable: true
-  per_page: true
+  enable: false
+  per_page: false
   cdn: https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js
 
 # Han Support docs: https://hanzi.pro/
