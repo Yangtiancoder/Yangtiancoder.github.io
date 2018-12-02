@@ -39,13 +39,6 @@ layout: page
 * <i class="fa fa-github " aria-hidden="true"></i><a href="https://github.com/Yangtiancoder" target="_blank" title="Yangtian的github">  我的GitHub</a>
 * <i class="fa fa-search " aria-hidden="true"></i><a href="https://www.zhihu.com/people/tian-yang-48-83/activities" target="_blank" title="我的知乎">  我的知乎</a>
 
-<li class="weixin">
-                        <a title="微信" id="weixin_btn" rel="external nofollow">
-                            <i class="fa fa-weixin"> </i>
-                            <div id="weixin_code" class="hide" >
-                                <img src="https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/assets/images/wexin.jpg?raw=true" alt="">
-                            </div>
-                        </a>
-                    </li>
+<li><a title="微信"><i class="fa fa-weixin"> </i><div id="weixin_code" class="hide" ><img src="https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/assets/images/wexin.jpg?raw=true" alt=""></div></a></li>
 
 
