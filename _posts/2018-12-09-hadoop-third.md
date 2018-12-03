@@ -17,11 +17,6 @@ HBase是一个针对结构化数据的可伸缩、高可靠、高性能、分布
 
 ![HBase-2.png](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/assets/images/HBase-2.png?raw=true)
 
-## 列存储降低系统的I/O的原因
-
-![HBase-3.png](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/assets/images/HBase-3.png?raw=true)
-
-
 # HBase架构
 
 HBase采用Master/Slave架构搭建集群，它隶属于Hadoop生态系统，由一下类型节点组成：HMaster节点、HRegionServer节点、ZooKeeper集群，而在底层，它将数据存储于HDFS中，因而涉及到HDFS的NameNode、DataNode等，总体结构如下：
