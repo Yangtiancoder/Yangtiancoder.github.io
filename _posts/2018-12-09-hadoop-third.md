@@ -133,5 +133,5 @@ HBase的所有Region元数据被存储在.META.表中，随着Region的增多，
 
 **参考资料**
 
-<https://www.cnblogs.com/cxzdy/p/5046820.html>
+<https://www.cnblogs.com/cxzdy/p/5046820.html>   
 <https://www.cnblogs.com/csyuan/p/6543018.html>
