@@ -25,8 +25,7 @@ HBase采用Master/Slave架构搭建集群，它隶属于Hadoop生态系统，由
 ## 其中HMaster节点用于：  
 
 -  管理HRegionServer，实现其负载均衡    
--  管理和分配HRegion，比如在HRegion  
--  split时分配新的HRegion；在HRegionServer退出时迁移其内的HRegion到其他HRegionServer上。  
+-  管理和分配HRegion，比如在HRegion split时分配新的HRegion；在HRegionServer退出时迁移其内的HRegion到其他HRegionServer上。  
 -  实现DDL操作（Data Definition Language，namespace和table的增删改，column familiy的增删改等）。  
 -  管理namespace和table的元数据（实际存储在HDFS上）。  
 -  权限控制（ACL）。    
