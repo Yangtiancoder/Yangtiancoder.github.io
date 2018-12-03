@@ -72,7 +72,7 @@ Row key行键 (Row key):   可以是任意字符串最大长度是64KB，实际�
 行的一次读写是原子操作,不论一次读写多少列。这个设计决策能够使用户很容易的理解程序在对同一个行进行并发更新操作时的行为。    
   
 Column：   
-Hbase表中的每个列，都归属与某个列族。列族是表的chema的一部分(而列不是)，必须在使用表之前定义。列名都以列族作为前缀。例如courses:history，courses:math  
+Hbase表中的每个列，都归属与某个列族。列族是表的schema的一部分(而列不是)，必须在使用表之前定义。列名都以列族作为前缀。例如courses:history，courses:math  
 
 都属于courses 这个列族。   
 
