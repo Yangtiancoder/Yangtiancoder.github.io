@@ -54,11 +54,11 @@ Zookeeper的核心是原子广播，这个机制保证了各个Server之间的�
 
 每个Server在工作过程中有三种状态：
 
--  LOOKING：当前Server不知道leader是谁，正在搜寻。
+-  LOOKING：当前Server不知道leader是谁，正在搜寻   
 
--  LEADING：当前Server即为选举出来的leader。
+-  LEADING：当前Server即为选举出来的leader   
 
--  FOLLOWING：leader已经选举出来，当前Server与之同步。
+-  FOLLOWING：leader已经选举出来，当前Server与之同步  
 
 ## 选主流程    
 
@@ -108,11 +108,11 @@ fast paxos流程是在选举过程中，某Server首先向所有Server提议自�
 
 Leader主要有三个功能：  
 
--  1.恢复数据；
+-  1.恢复数据  
 
--  2.维持与Learner的心跳，接收Learner请求并判断Learner的请求消息类型；
+-  2.维持与Learner的心跳，接收Learner请求并判断Learner的请求消息类型   
 
--  3.Learner的消息类型主要有PING消息、REQUEST消息、ACK消息、REVALIDATE消息，根据不同的消息类型，进行不同的处理。
+-  3.Learner的消息类型主要有PING消息、REQUEST消息、ACK消息、REVALIDATE消息，根据不同的消息类型，进行不同的处理   
 
 PING消息是指Learner的心跳信息；REQUEST消息是Follower发送的提议信息，包括写请求及同步请求；ACK消息是Follower的对提议的回复，超过半数的Follower通过，则commit该提议；REVALIDATE消息是用来延长SESSION有效时间。
 Leader的工作流程简图如下所示，在实际实现中，流程要比下图复杂得多，启动了三个线程来实现功能。  
@@ -202,6 +202,6 @@ ZooKeeper 中特有watcher注册与异步通知机制，能够很好的实现分
 
 **参考资料**
 
-<https://www.cnblogs.com/felixzh/p/5869212.html>
+<https://www.cnblogs.com/felixzh/p/5869212.html>  
 <https://blog.csdn.net/wzk646795873/article/details/79706627>
 
