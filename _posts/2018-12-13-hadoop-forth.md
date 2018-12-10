@@ -15,6 +15,10 @@ ZooKeeper顾名思义动物园管理员，他是拿来管大象(Hadoop)、蜜蜂
 
 # zookeeper的作用及其架构
 
+HDFS中的HA方案   
+YARN的HA方案   
+HBase必须依赖Zookeeper，保存了Regionserver的心跳信息，和其他的一些关键信息   
+
 ZooKeeper是一个分布式的，开放源码的分布式应用程序协调服务，它包含一个简单的原语集，分布式应用程序可以基于它实现同步服务，配置维护和命名服务等。Zookeeper是hadoop的一个子项目，在分布式应用中，由于工程师不能很好地使用锁机制，以及基于消息的协调机制不适合在某些应用中使用，因此需要有一种可靠的、可扩展的、分布式的、可配置的协调机制来统一系统的状态。Zookeeper的目的就在于此。
 
 ![Zookeeper-1.png](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/assets/images/Zookeeper-1.png?raw=true)
