@@ -7,6 +7,8 @@ description: Zookeeper原理及作用整理笔记。
 ---
 
 
+推广一个看到很详细的关于Zookeeper的文章：<http://www.cnblogs.com/leesf456/p/6012777.html>   
+
 # 什么是Zookeeper
   
 ZooKeeper顾名思义动物园管理员，他是拿来管大象(Hadoop)、蜜蜂(Hive)、小猪(Pig)的管理员，ApacheHbase和ApacheSolr以及LinkedInsensei等项目中都采用到了Zookeeper。ZooKeeper是一个分布式的，开放源码的分布式应用程序协调服务，ZooKeeper是以FastPaxos算法为基础，实现同步服务，配置维护和命名服务等分布式应用。    
