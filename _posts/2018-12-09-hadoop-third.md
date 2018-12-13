@@ -3,7 +3,7 @@ layout: post
 title: hadoop原理(三)（Hadoop2.x版本）
 category: blog
 tags: [hadoop]
-description: HBase原理及基本内容。
+description: HBase原理及基本内容整理。
 ---
 
 
