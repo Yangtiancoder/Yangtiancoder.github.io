@@ -3,7 +3,7 @@ layout: post
 title: hadoop原理(一)（Hadoop2.x版本）
 category: blog
 tags: [hadoop]
-description: 主要模块与工作机制。
+description: 主要模块与工作机制整理笔记。
 ---
 
 
