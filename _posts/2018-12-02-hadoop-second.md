@@ -3,7 +3,7 @@ layout: post
 title: hadoop原理(二)（Hadoop2.x版本）
 category: blog
 tags: [hadoop]
-description: HDFS基本概念和原理。
+description: HDFS基本概念和原理整理笔记。
 ---
 
 
