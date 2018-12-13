@@ -37,5 +37,5 @@ layout: page
 * <i class="fa fa-weibo " aria-hidden="true"></i><a href="https://weibo.com/u/5393123005?refer_flag=1001030201_&is_hot=1" target="_blank" title="我的weibo">  我的微博</a>
 * <i class="fa fa-weixin " aria-hidden="true"></i><a href="https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/assets/images/wexin.jpg?raw=true" target="_parent" shape="rect" title="Yangtian的微信"> 我的微信</a>  
 * <i class="fa fa-github " aria-hidden="true"></i><a href="https://github.com/Yangtianblog" target="_blank" title="Yangtian的github">  我的GitHub</a>
-* <i class="fa fa-search " aria-hidden="true"></i><a href="https://www.zhihu.com/people/tian-yang-48-83/activities" target="_blank" title="我的知乎">  我的知乎</a>
+* <i class="fa fa-search " aria-hidden="true"></i><a href="https://www.zhihu.com/people/Yangtiancoder/activities" target="_blank" title="我的知乎">  我的知乎</a>
 
