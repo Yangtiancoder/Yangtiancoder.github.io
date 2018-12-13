@@ -27,9 +27,10 @@ layout: page
    - computer science
 -  Education
    - Fudan University
+   - Chang’an University
 -  Interest
-   - music
    - basketball
+   - music
 
 
   <h3>来勾搭我</h3>
