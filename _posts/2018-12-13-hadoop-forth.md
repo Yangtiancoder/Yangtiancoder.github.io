@@ -1,6 +1,6 @@
 ---
 layout: post
-title: hadoop原理(转)(四)（Hadoop2.x版本）
+title: hadoop原理(四)(转)（Hadoop2.x版本）
 category: blog
 tags: [hadoop]
 description: Zookeeper原理及作用。
