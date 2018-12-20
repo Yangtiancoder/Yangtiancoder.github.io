@@ -27,7 +27,6 @@ layout: page
    - computer science
 -  Education
    - Fudan University
-   - Chang’an University
 -  Interest
    - basketball
    - music
