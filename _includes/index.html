@@ -1,8 +1,6 @@
 {% assign posts = site.posts %}
 {% if site.paginate > 0 %}{% assign posts = paginator.posts %}{% endif %}
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=1318933384&auto=1&height=32"></iframe>
 <section id="posts" class="posts-expand">
-  <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=1318933384&auto=1&height=32"></iframe>
   {% for post in posts %}
     {% assign is_index = true %}
     {% include _macro/post.html %}
