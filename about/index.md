@@ -6,7 +6,7 @@ layout: page
 
 
 
-<audio id="audio" controls="controls" autoplay="autoplay" loop="loop">
+<audio id="audio" controls="controls" autoplay="autoplay" preload="auto" loop="loop">
       <source id="mp3" src="https://Yangtianblog.github.io/24268288c44aa0171260bb17f30bfbaa.mp3">
 </audio>
  
