@@ -6,7 +6,11 @@ layout: page
 
 
 
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1314154490&auto=0&height=66"></iframe>    
+<audio id="audio" controls="" preload="none">
+      <source id="mp3" src="http://music.163.com/#/song?id=442867218">
+      </audio>
+
+
 
  
  你好
@@ -21,7 +25,7 @@ layout: page
   
  每一个不曾起舞的日子，都是对生命的辜负。                   ——尼采
  
-
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1314154490&auto=0&height=66"></iframe>
 
  <h2>关于我</h2>
   
