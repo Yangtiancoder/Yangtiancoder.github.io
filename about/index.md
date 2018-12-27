@@ -3,14 +3,9 @@ title: about me
 layout: page
 ---
 
-<video id="video" controls="" preload="none" poster="http://om2bks7xs.bkt.clouddn.com/2017-08-26-Markdown-Advance-Video.jpg">
-      <source id="mp4" src="http://t.cn/RMPeps6" type="video/mp4">
-</video>
-  
-<audio id="audio" controls="" preload="none">
-      <source id="mp3" src="http://oht4nlntk.bkt.clouddn.com/Music_iP%E8%B5%B5%E9%9C%B2%20-%20%E7%A6%BB%E6%AD%8C%20%28Live%29.mp3">
-      </audio>  
 
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1314154490&auto=0&height=66"></iframe>  
+ 
  你好
 
  很高兴你终于发现我的网站！
@@ -23,13 +18,7 @@ layout: page
   
  每一个不曾起舞的日子，都是对生命的辜负。                   ——尼采
  
- <video id="video" controls="" preload="none" poster="http://om2bks7xs.bkt.clouddn.com/2017-08-26-Markdown-Advance-Video.jpg">
-      <source id="mp4" src="http://t.cn/RMPeps6" type="video/mp4">
-</video>
-  
-<audio id="audio" controls="" preload="none">
-      <source id="mp3" src="http://oht4nlntk.bkt.clouddn.com/Music_iP%E8%B5%B5%E9%9C%B2%20-%20%E7%A6%BB%E6%AD%8C%20%28Live%29.mp3">
-      </audio>  
+
 
  <h2>关于我</h2>
   
