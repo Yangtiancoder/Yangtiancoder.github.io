@@ -3,8 +3,13 @@ title: about me
 layout: page
 ---
 
- 
-<iframe src="https://skydrive.live.com/embed?cid=8B504C1595CD3973&amp;resid=8B504C1595CD3973%2126382&amp;authkey=AJzDcN30q6g4W0Y&amp;em=2" width="700px" height="500px" frameborder="0" scrolling="no"> </iframe>  
+<video id="video" controls="" preload="none" poster="http://om2bks7xs.bkt.clouddn.com/2017-08-26-Markdown-Advance-Video.jpg">
+      <source id="mp4" src="http://t.cn/RMPeps6" type="video/mp4">
+</video>
+  
+<audio id="audio" controls="" preload="none">
+      <source id="mp3" src="http://oht4nlntk.bkt.clouddn.com/Music_iP%E8%B5%B5%E9%9C%B2%20-%20%E7%A6%BB%E6%AD%8C%20%28Live%29.mp3">
+      </audio>  
 
  你好
 
