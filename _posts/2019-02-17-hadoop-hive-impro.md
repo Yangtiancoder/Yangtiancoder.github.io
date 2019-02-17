@@ -30,10 +30,39 @@ LINEITEM：表示订单的信息
 NATION：表示国家的信息
 REGION：表示地区的信息
 
-![](hiveim-1.png)
+![](https://github.com/Yangtiancoder/Yangtiancoder.github.io/blob/master/assets/images/hiveim-1.png?raw=true)
 TPC-H表结构图
 
 ## 调优过程
+
+q4语句：
+DROP TABLE orders;  
+DROP TABLE lineitem;  
+DROP TABLE q4_order_priority_tmp;  
+DROP TABLE q4_order_priority;  
+-- create tables and load data
+create external table orders (O_ORDERKEY INT, O_CUSTKEY INT, O_ORDERSTATUS STRING, O_TOTALPRICE DOUBLE, O_ORDERDATE STRING, O_ORDERPRIORITY STRING, O_CLERK STRING, O_SHIPPRIORITY INT, O_COMMENT STRING) ROW FORMAT DELIMITED FIELDS TERMINATED BY '|' STORED AS TEXTFILE LOCATION '/tpch/orders';  
+Create external table lineitem (L_ORDERKEY INT, L_PARTKEY INT, L_SUPPKEY INT, L_LINENUMBER INT, L_QUANTITY DOUBLE, L_EXTENDEDPRICE DOUBLE, L_DISCOUNT DOUBLE, L_TAX DOUBLE, L_RETURNFLAG STRING, L_LINESTATUS STRING, L_SHIPDATE STRING, L_COMMITDATE STRING, L_RECEIPTDATE STRING, L_SHIPINSTRUCT STRING, L_SHIPMODE STRING, L_COMMENT STRING) ROW FORMAT DELIMITED FIELDS TERMINATED BY '|' STORED AS TEXTFILE LOCATION '/tpch/lineitem';  
+-- create the target table
+CREATE TABLE q4_order_priority_tmp (O_ORDERKEY INT);  
+CREATE TABLE q4_order_priority (O_ORDERPRIORITY STRING, ORDER_COUNT INT);  
+set mapred.min.split.size=536870912;  
+-- the query
+INSERT OVERWRITE TABLE q4_order_priority_tmp   
+select   
+  DISTINCT l_orderkey   
+from   
+  lineitem 
+where   
+  l_commitdate < l_receiptdate;  
+INSERT OVERWRITE TABLE q4_order_priority   
+select o_orderpriority, count(1) as order_count   
+from   
+  orders o join q4_order_priority_tmp t   
+  on   
+o.o_orderkey = t.o_orderkey and o.o_orderdate >= '1993-07-01' and o.o_orderdate < '1993-10-01'   
+group by o_orderpriority   
+order by o_orderpriority;  
 
 我们以q4查询为例，逐步优化，最后总体测试优化结果;
 
@@ -89,6 +118,7 @@ Time taken:200.623
 我们发现输出日志内容中，job数目从7增加到8，groupby配置用于控制负载均衡，当数据出现倾斜时，如果该变量设置为true，那么Hive会自动进行负载均衡。
 
 优化5：非严格分区模式
+```xml
 <property>
     <name>hive.exec.dynamic.partition.mode</name>
     <value>nonstrict</value>
@@ -98,21 +128,24 @@ Time taken:200.623
       In nonstrict mode all partitions are allowed to be dynamic.
     </description>
 </property>
+```
 hive提供了一个严格模式，可以防止用户执行那些可能产生意想不到的不好的效果的查询。即某些查询在严格
 模式下无法执行。通过设置hive.mapred.mode的值为strict，可以禁止3种类型的查询。修改配置之后，发现测试在时间运行上没有优化效果
 Time taken:202.823 seconds
 
 优化6：独立的jvm中执行map/reduce
+```xml
   <property>
     <name>hive.exec.submitviachild</name>
     <value>true</value>
     <description/>
 </property>
-
+```
 Time taken:185.646 seconds
 优化效果较为明显，该项配置修改在非本地模式的任务，在自己的jvm上提交任务，猜测减少了网络IO的时间啊，因此时间效率产生优化
 
 优化7：压缩
+```xml
 <property>
                 <name>hive.exec.compress.intermediate</name>
                 <value>true</value>
@@ -121,6 +154,7 @@ Time taken:185.646 seconds
        <name>hive.exec.compress.output</name>
      <value>true</value>
 </property>
+```
 顺着优化6的思路，可以继续减少网络IO的时间，因此我们开启压缩，任务数据进行压缩会消耗部分cpu时间，但是发现结果中优化依然有效。
 Time taken:167.921 seconds
 
