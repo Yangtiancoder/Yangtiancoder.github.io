@@ -68,7 +68,8 @@ order by o_orderpriority;
 
 default配置下q4查询总时间为：
 Time taken:216.158
-优化1：部分本地模式
+
+**优化1：部分本地模式**
 ```xml
 <property>
     <name>hive.exec.mode.local.auto</name>
@@ -84,7 +85,7 @@ Cannot run job locally: Input Size (= 759863287) is larger than hive.exec.mode.l
 ```
 说明本地模式并不完全，有部分作业超过本地内存输入，因此不在本地进行，因此我们进行第二项优化。
 
-优化2：本地模式完全开启
+**优化2：本地模式完全开启**
 ```xml
   <property>
     <name>hive.exec.mode.local.auto.inputbytes.max</name>
@@ -95,7 +96,7 @@ Cannot run job locally: Input Size (= 759863287) is larger than hive.exec.mode.l
 Time taken:67.465
 可见优化效果明显。
 
-优化3：开启并行
+**优化3：开启并行**
 ```xml
 <property>
     <name>hive.exec.parallel</name>
@@ -105,7 +106,7 @@ Time taken:67.465
 Time taken:76.007 seconds
 发现时间并没有缩短反而延长，多次测试后发现不是偶然现象，优化没有效果，查阅资料可能是本地没有足够资源进行并行，加上部分查询本身存在依赖，因此本次优化并没有取得很好的效果，除此之外在完全本地模式下，本地资源已经造成足够大的负担,采用其他优化在此之上时间并没有缩短，因此之后的优化中取消完全本地模式，开启半本地模式，其他任务还是提交到集群中进行处理。
 
-优化4：groupby优化
+**优化4：groupby优化**
 ```xml
 <property>
     <name>hive.groupby.skewindata</name>
@@ -117,7 +118,7 @@ totaljob=8
 Time taken:200.623
 我们发现输出日志内容中，job数目从7增加到8，groupby配置用于控制负载均衡，当数据出现倾斜时，如果该变量设置为true，那么Hive会自动进行负载均衡。
 
-优化5：非严格分区模式
+**优化5：非严格分区模式**
 ```xml
 <property>
     <name>hive.exec.dynamic.partition.mode</name>
@@ -133,7 +134,7 @@ hive提供了一个严格模式，可以防止用户执行那些可能产生意�
 模式下无法执行。通过设置hive.mapred.mode的值为strict，可以禁止3种类型的查询。修改配置之后，发现测试在时间运行上没有优化效果
 Time taken:202.823 seconds
 
-优化6：独立的jvm中执行map/reduce
+**优化6：独立的jvm中执行map/reduce**
 ```xml
   <property>
     <name>hive.exec.submitviachild</name>
@@ -144,7 +145,7 @@ Time taken:202.823 seconds
 Time taken:185.646 seconds
 优化效果较为明显，该项配置修改在非本地模式的任务，在自己的jvm上提交任务，猜测减少了网络IO的时间啊，因此时间效率产生优化
 
-优化7：压缩
+**优化7：压缩**
 ```xml
 <property>
                 <name>hive.exec.compress.intermediate</name>
@@ -158,7 +159,7 @@ Time taken:185.646 seconds
 顺着优化6的思路，可以继续减少网络IO的时间，因此我们开启压缩，任务数据进行压缩会消耗部分cpu时间，但是发现结果中优化依然有效。
 Time taken:167.921 seconds
 
-优化8：基于上述配置开启本地模式
+**优化8：基于上述配置开启本地模式**
 Time taken:131.777 seconds
 发现运行时间减少，但是多于仅开启本地模式的时间Time taken:64.826，发现多条优化策略在时间上慢于开启完全本地模式时间。
 
