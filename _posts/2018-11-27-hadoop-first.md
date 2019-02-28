@@ -49,8 +49,7 @@ MapReduce在hadoop1.x作业执行的流程图
 
 ### Hadoop1.x的MapReduce框架的主要局限： 
 （1）JobTracker 是 Map-reduce 的集中处理点，存在单点故障，可靠性差；   
-（2）JobTracker 完成了太多的任务，造成了过多的资源消耗，当 map-reduce job 非常多的时候，会造成很大的内存开销，潜在来说，也增加了 JobTracker 失效的风险，这也是业界普遍总结出老 Hadoop 的 Map-Reduce 只能支持 4000 节点主机的上限，扩展性能差。   
-（3）可预测的延迟：这是用户非常关心的。小作业应该尽可能快得被调度，而当前基于TaskTracker->JobTracker ping（heartbeat）的通信方式代价和延迟过大，比较好的方式是JobTracker->TaskTracker ping, 这样JobTracker可以主动扫描有作业运行的TaskTracker。  
+（2）JobTracker 完成了太多的任务，造成了过多的资源消耗，当 map-reduce job 非常多的时候，会造成很大的内存开销，潜在来说，也增加了 JobTracker 失效的风险。   
 
 ## Hadoop2.x中的MapReduce
 
