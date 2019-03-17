@@ -22,7 +22,7 @@ hashCode和equals方法的关系：常规不赘述
 spark，flink区别：常规不赘述   
 hbase的rowkey设计注意：这个我真没注意...回去查了一下...   
 MR过程：常规不赘述   
-spark进行了哪些优化:详细一点shuufle后来版本优化,consolidation，DAG，宽窄依赖等等都讲   
+spark进行了哪些优化:详细一点shuffle优化,consolidation机制，DAG，宽窄依赖等等都讲   
 hive调优：我之前做过hive调优的PJ...
 zookeeper为什么三台选举：常规不赘述     
 
