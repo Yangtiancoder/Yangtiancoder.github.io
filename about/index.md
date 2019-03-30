@@ -7,8 +7,9 @@ layout: page
 
 
 
-<iframe class="music" frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=1314154490&auto=1&height=66"></iframe>
-<script> alert("123")</script>
+<audio id="audio" controls="controls" autoplay="autoplay" preload="auto" loop="loop">
+      <source id="mp3" src="https://Yangtianblog.github.io/24268288c44aa0171260bb17f30bfbaa.mp3"><h5>我很好听</h5>
+</audio>
  
  你好
 
