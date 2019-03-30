@@ -50,6 +50,7 @@ layout: page
 <script>
 	$("#weixin").on("click",function(){
 		$("#alert").fadeToggle();
+		return false;
 	})
 	$("body").on("click",function(){
 		$("#alert").fadeOut();
