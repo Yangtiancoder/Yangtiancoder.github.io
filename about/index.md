@@ -27,7 +27,7 @@ layout: page
 
  <h2>关于我</h2>
          
-  A  boy born in 1996.          
+born in 1996.          
 
 -  工作          
    - **爱奇艺**&emsp;&nbsp;&nbsp;&nbsp;&nbsp;大数据研发-实习 &emsp;2019.05-至今          
