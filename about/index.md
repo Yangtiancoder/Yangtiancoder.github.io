@@ -26,17 +26,17 @@ layout: page
  
 
  <h2>关于我</h2>
-  
-  A  boy born in 1996.
- 
--  Master degree candidate
--  Major
-   - computer science
--  Education
-   - Fudan University
--  Interest
-   - basketball
-   - music
+         
+  A  boy born in 1996.          
+
+-  工作          
+   - 爱奇艺    大数据研发-实习   2019.05-至今          
+   - 平安科技  大数据研发-实习   2019.02-2019.05           
+-  教育               
+   - 复旦大学硕士在读          
+-  专业                
+   - 计算机技术           
+
 
 
   <h3>来勾搭我</h3>
