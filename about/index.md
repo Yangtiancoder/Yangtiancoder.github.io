@@ -30,7 +30,7 @@ layout: page
   A  boy born in 1996.          
 
 -  工作          
-   - **爱奇艺** &emsp; &nbsp;&nbsp;&nbsp;大数据研发-实习 &emsp;2019.05-至今          
+   - **爱奇艺** &emsp; &nbsp;&nbsp;大数据研发-实习 &emsp;2019.05-至今          
    - **平安科技** &emsp;大数据研发-实习 &emsp;2019.02-2019.05           
    
 -  教育               
