@@ -18,10 +18,8 @@
 -  Major
    - computer science
 -  Education
-   - Chang'an University
    - Fudan University
 -  Interest
    - music
    - basketball
-   - movies
 
