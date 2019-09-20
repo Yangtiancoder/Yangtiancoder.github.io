@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 爱奇艺日常实习面经
+title: 爱奇艺实习面经
 category: blog
 tags: [hadoop]
 description: 大数据研发相关。
