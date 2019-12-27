@@ -22,7 +22,7 @@ layout: page
  
  Every single day without dancing is one day we betrayed of life.
   
- 每一个不曾起舞的日子，都是对生命的辜负。                   ——尼采
+ 我在平凡的生活中体验人间疾苦。                   ——田洋
  
 
  <h2>关于我</h2>
@@ -35,7 +35,7 @@ born in 1996.
    - **爱奇艺**&emsp;&nbsp;&nbsp;&nbsp;&nbsp;大数据研发-实习 &emsp;2019.04-07              
    
 -  教育               
-   - 复旦大学硕士在读          
+   - 复旦大学在读
    
 -  专业                
    - 计算机技术           
