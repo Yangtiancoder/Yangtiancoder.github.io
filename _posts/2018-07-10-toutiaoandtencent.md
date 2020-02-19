@@ -17,8 +17,7 @@ spark为什么快
 多线程多进程          
 什么时候提交job               
 spark处理流程           
-spark和flink流处理区别            
-flinK流处理过程                
+spark和flink流处理区别                       
 那个性能更好为什么，大约好到什么程度                  
                               
 ## 腾讯ieg二面（60分钟）               
@@ -33,11 +32,10 @@ redis的Qps
 两道场景题+知识点很难描述             
 DAG划分spark源码实现                
 spark join过程               
-spark的Broadcast              
-快排              
+spark的Broadcast                
 海量数据问题(用堆的topk）                        
 
-面试官很nice场景题讨论比较久，我也不知道说的对不对，毕竟实际的场景我也没用过...
+面试官很nice场景题讨论比较久，我也不知道说的对不对...
 
 ## 腾讯ieg三面（30分钟）                                  
 
@@ -46,10 +44,7 @@ spark的Broadcast
 ## 腾讯ieg四面（60分钟）                               
 
 这一面也是很突然，和三面一个部门，转组到了上海...            
-
-整形范围           
-排序算法              
-堆排序过程             
+                               
 KAFKA有序性                 
 如何保证KAFKA有序                 
 spark源码讲解             
@@ -78,8 +73,7 @@ spark的shuffle
 job触发             
 spark streaming和structed streamin                      
 几道大数据场景题目，非常规那种，记不清了，感觉我回答的一般                            
-数据倾斜解决                            
-操作系统内存寻址           
+数据倾斜解决                                     
 hash冲突            
 设计hash规则                    
 基本问题也记不清了...             
@@ -89,18 +83,8 @@ action和transformation
 reducebykey和groupByKey区别及优化场景                           
 map和flatmap区别                               
                               
-算法方面（7道3+2+2）+(1道sql)：
-
-最长无重复子串（java）     
-反转链表（java）                                 
-topk（堆）（java）                                          
-实现sqrt功能函数（java）                                        
-sql（groupby+join+count）                                             
-层序遍历二叉树宽度（java）                                                        
-这道题目比较长但是简单（scala）                                                       
-有符号大数判断（java）                                          
+算法方面（7道3+2+2）+(1道sql)                                
                                                         
-
 ## 字节跳动四面（HR10分钟）                        
                  
 依然是聊天。                       
