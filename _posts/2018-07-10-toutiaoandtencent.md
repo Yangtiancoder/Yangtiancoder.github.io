@@ -71,14 +71,14 @@ spark源码讲解
 spark和hadoop区别                             
 spark的shuffle                      
 job触发             
-spark streaming和structed streamin                      
+spark streaming和structed streaming                  
 几道大数据场景题目，非常规那种，记不清了，感觉我回答的一般                            
 数据倾斜解决                                     
 hash冲突            
 设计hash规则                    
 基本问题也记不清了...             
 spark和flink区别                        
-手写算子，写了30多个吧,才叫停了                
+手写算子...
 action和transformation                  
 reducebykey和groupByKey区别及优化场景                           
 map和flatmap区别                               
