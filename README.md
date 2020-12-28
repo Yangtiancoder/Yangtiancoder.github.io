@@ -19,7 +19,3 @@
    - computer science
 -  Education
    - Fudan University
--  Interest
-   - music
-   - basketball
-
